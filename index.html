@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Montcada — parket, laminat, SPC, decking və mebel kolleksiyaları.">
+<title>MONTCADA | Premium Interior</title>
+<style>
+:root {
+  --dark:#20231f;
+  --gold:#b99c6c;
+  --cream:#f5f3ee;
+  --text:#292a27;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:var(--text);background:#fff}
+a{text-decoration:none;color:inherit}
+button,input{font:inherit}
+header{
+ position:sticky;top:0;z-index:10;background:#fff;
+ display:flex;align-items:center;justify-content:space-between;
+ padding:20px 7%;border-bottom:1px solid #eee;
+}
+.logo{font-size:26px;font-weight:800;letter-spacing:4px}
+.logo span{color:var(--gold)}
+nav{display:flex;align-items:center;gap:27px;font-size:13px}
+nav a:hover{color:var(--gold)}
+.lang{border:1px solid #ddd;background:white;padding:9px 12px;cursor:pointer}
+.hero{
+ min-height:570px;color:white;display:flex;align-items:center;
+ padding:90px 9%;
+ background:linear-gradient(90deg,rgba(20,23,20,.82),rgba(20,23,20,.2)),
+ url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85') center/cover;
+}
+.hero-content{max-width:650px}
+.eyebrow{color:#d5bd91;letter-spacing:5px;font-size:12px;margin-bottom:25px}
+.hero h1{font-size:clamp(39px,6vw,70px);line-height:1.08;margin-bottom:24px}
+.hero p{font-size:16px;line-height:1.8;color:#e1e1dc;max-width:480px}
+.btn{
+ display:inline-block;margin-top:32px;background:var(--gold);
+ color:#171713;padding:16px 27px;border:0;font-size:12px;
+ letter-spacing:1px;font-weight:bold;cursor:pointer
+}
+.btn:hover{background:#d0b88e}
+.section{padding:85px 7%}
+.section-head{text-align:center;margin-bottom:42px}
+.section-head small{color:var(--gold);letter-spacing:4px;font-size:11px}
+.section-head h2{font-size:35px;margin-top:14px}
+.section-head p{color:#777;margin-top:12px;line-height:1.7}
+.categories{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:22px
+}
+.category{position:relative;height:330px;overflow:hidden;background:#ddd}
+.category img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.category:hover img{transform:scale(1.06)}
+.category:after{
+ content:"";position:absolute;inset:40% 0 0;
+ background:linear-gradient(transparent,rgba(0,0,0,.75))
+}
+.category-info{position:absolute;z-index:1;bottom:25px;left:25px;color:white}
+.category-info h3{font-size:25px;margin-bottom:8px}
+.category-info p{font-size:13px;color:#eee}
+.about{
+ background:var(--cream);display:grid;grid-template-columns:1fr 1fr;
+ gap:55px;align-items:center
+}
+.about img{width:100%;height:390px;object-fit:cover}
+.about h2{font-size:36px;line-height:1.2;margin:18px 0}
+.about p{line-height:1.9;color:#666;font-size:15px}
+.about small{letter-spacing:4px;color:var(--gold)}
+.products{background:#fff}
+.search-wrap{max-width:500px;margin:0 auto 35px}
+.search-wrap input{
+ width:100%;padding:16px 18px;border:1px solid #ddd;outline:none
+}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.product-card{background:var(--cream);padding:25px}
+.product-card h3{font-size:19px;margin-bottom:10px}
+.product-card p{font-size:13px;color:#777;line-height:1.7}
+.product-card button{
+ margin-top:20px;background:none;border:0;border-bottom:1px solid var(--gold);
+ padding-bottom:6px;cursor:pointer;font-size:12px
+}
+.contact{
+ background:var(--dark);color:white;text-align:center;padding:85px 7%
+}
+.contact h2{font-size:37px;margin:18px 0}
+.contact p{color:#ccc;line-height:1.8}
+footer{
+ background:#171916;color:#aaa;padding:28px 7%;
+ display:flex;justify-content:space-between;gap:20px;
+ font-size:12px;flex-wrap:wrap
+}
+footer strong{color:white;letter-spacing:3px}
+.empty{display:none;text-align:center;color:#777;padding:25px}
+@media(max-width:760px){
+ header{padding:17px 5%;flex-wrap:wrap;gap:15px}
+ .logo{font-size:22px}
+ nav{width:100%;justify-content:space-between;gap:8px;font-size:11px}
+ .lang{padding:7px}
+ .hero{min-height:490px;padding:70px 7%}
+ .hero h1{font-size:43px}
+ .section{padding:65px 6%}
+ .section-head h2{font-size:29px}
+ .categories{grid-template-columns:1fr 1fr;gap:12px}
+ .category{height:230px}
+ .category-info{left:14px;bottom:17px}
+ .category-info h3{font-size:19px}
+ .category-info p{font-size:11px}
+ .about{grid-template-columns:1fr;gap:28px}
+ .about img{height:270px}
+ .about h2{font-size:30px}
+ .product-grid{grid-template-columns:1fr 1fr;gap:12px}
+ .product-card{padding:17px}
+ .product-card h3{font-size:16px}
+}
+@media(max-width:380px){
+ .categories,.product-grid{grid-template-columns:1fr}
+ .category{height:260px}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <a class="logo" href="#home">MONTCADA<span>.</span></a>
+ <nav>
+  <a href="#home" data-t="home">Ana səhifə</a>
+  <a href="#categories" data-t="catalog">Kolleksiyalar</a>
+  <a href="#about" data-t="about">Haqqımızda</a>
+  <a href="#contact" data-t="contact">Əlaqə</a>
+  <select class="lang" id="language" aria-label="Language">
+   <option value="az">AZ</option>
+   <option value="ru">RU</option>
+   <option value="en">EN</option>
+  </select>
+ </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="hero-content">
+  <div class="eyebrow">PREMIUM INTERIOR COLLECTION</div>
+  <h1 data-t="heroTitle">Məkanınıza dəyər qatan seçimlər.</h1>
+  <p data-t="heroText">Zövqünüzə uyğun döşəmə və interyer həlləri ilə məkanınıza yeni xarakter qazandırın.</p>
+  <a class="btn" href="#categories" data-t="discover">KOLLEKSİYALARI KƏŞF ET</a>
+ </div>
+</section>
+
+<section class="section" id="categories">
+ <div class="section-head">
+  <small>MONTCADA COLLECTION</small>
+  <h2 data-t="collections">Kolleksiyalarımız</h2>
+  <p data-t="collectionsText">Hər məkan üçün uyğun material və dizayn seçimləri.</p>
+ </div>
+ <div class="categories">
+  <a class="category" href="#products">
+   <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Parket interyeri">
+   <div class="category-info"><h3 data-t="parquet">Parket</h3><p data-t="parquetText">Təbii ağacın zərifliyi</p></div>
+  </a>
+  <a class="category" href="#products">
+   <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Laminat döşəmə">
+   <div class="category-info"><h3 data-t="laminate">Laminat</h3><p data-t="laminateText">Müasir və praktik seçim</p></div>
+  </a>
+  <a class="category" href="#products">
+   <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=900&q=80" alt="SPC döşəmə">
+   <div class="category-info"><h3>SPC</h3><p data-t="spcText">Davamlı və estetik örtüklər</p></div>
+  </a>
+  <a class="category" href="#products">
+   <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80" alt="Decking terras">
+   <div class="category-info"><h3>Decking</h3><p data-t="deckText">Açıq məkanlar üçün</p></div>
+  </a>
+  <a class="category" href="#products">
+   <img src="https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&w=900&q=80" alt="Mebel interyeri">
+   <div class="category-info"><h3 data-t="furniture">Mebel</h3><p data-t="furnitureText">İnteryerə xüsusi xarakter</p></div>
+  </a>
+  <a class="category" href="#contact">
+   <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=900&q=80" alt="İnteryer dizaynı">
+   <div class="category-info"><h3 data-t="interior">İnteryer</h3><p data-t="interiorText">İlham verən məkanlar</p></div>
+  </a>
+ </div>
+</section>
+
+<section class="section about" id="about">
+ <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=85" alt="Montcada interyer kolleksiyası">
+ <div>
+  <small>ABOUT MONTCADA</small>
+  <h2 data-t="aboutTitle">Keyfiyyət detallarda gizlidir.</h2>
+  <p data-t="aboutText">Montcada parket, laminat, SPC, decking və mebel sahəsində fərqli seçimləri bir araya gətirir. Məqsədimiz hər məkan üçün estetik və praktik həllər təqdim etməkdir.</p>
+  <a class="btn" href="#contact" data-t="contactUs">BİZİMLƏ ƏLAQƏ</a>
+ </div>
+</section>
+
+<section class="section products" id="products">
+ <div class="section-head">
+  <small>FIND YOUR STYLE</small>
+  <h2 data-t="productTitle">Sizə uyğun kolleksiya</h2>
+  <p data-t="productText">Məhsul kateqoriyalarımız arasında axtarış edin.</p>
+ </div>
+ <div class="search-wrap">
+  <input id="search" type="search" placeholder="Məhsul axtar..." data-placeholder="search">
+ </div>
+ <div class="product-grid" id="productGrid">
+  <div class="product-card" data-name="parket parquet паркет">
+   <h3 data-t="parquet">Parket</h3><p data-t="parquetText">Təbii ağacın zərifliyi</p>
+   <button onclick="goContact()" data-t="details">Ətraflı məlumat</button>
+  </div>
+  <div class="product-card" data-name="laminat laminate ламинат">
+   <h3 data-t="laminate">Laminat</h3><p data-t="laminateText">Müasir və praktik seçim</p>
+   <button onclick="goContact()" data-t="details">Ətraflı məlumat</button>
+  </div>
+  <div class="product-card" data-name="spc">
+   <h3>SPC</h3><p data-t="spcText">Davamlı və estetik örtüklər</p>
+   <button onclick="goContact()" data-t="details">Ətraflı məlumat</button>
+  </div>
+  <div class="product-card" data-name="decking">
+   <h3>Decking</h3><p data-t="deckText">Açıq məkanlar üçün</p>
+   <button onclick="goContact()" data-t="details">Ətraflı məlumat</button>
+  </div>
+  <div class="product-card" data-name="mebel furniture мебель">
+   <h3 data-t="furniture">Mebel</h3><p data-t="furnitureText">İnteryerə xüsusi xarakter</p>
+   <button onclick="goContact()" data-t="details">Ətraflı məlumat</button>
+  </div>
+ </div>
+ <p class="empty" id="empty" data-t="noResults">Nəticə tapılmadı.</p>
+</section>
+
+<section class="contact" id="contact">
+ <small style="color:#c9ae7c;letter-spacing:4px">MONTCADA</small>
+ <h2 data-t="contactTitle">Məkanınızı birlikdə yaradaq.</h2>
+ <p data-t="contactText">Məhsullarımız və kolleksiyalarımız barədə məlumat almaq üçün bizimlə əlaqə saxlayın.</p>
+ <a class="btn" href="mailto:info@montcada.az" data-t="emailUs">E-POÇT GÖNDƏR</a>
+</section>
+</main>
+
+<footer>
+ <strong>MONTCADA.</strong>
+ <span>© <span id="year"></span> MONTCADA. All rights reserved.</span>
+ <a href="#home" data-t="top">Yuxarı qayıt ↑</a>
+</footer>
+
+<script>
+const translations={
+ az:{
+ home:"Ana səhifə",catalog:"Kolleksiyalar",about:"Haqqımızda",contact:"Əlaqə",
+ heroTitle:"Məkanınıza dəyər qatan seçimlər.",
+ heroText:"Zövqünüzə uyğun döşəmə və interyer həlləri ilə məkanınıza yeni xarakter qazandırın.",
+ discover:"KOLLEKSİYALARI KƏŞF ET",collections:"Kolleksiyalarımız",
+ collectionsText:"Hər məkan üçün uyğun material və dizayn seçimləri.",
+ parquet:"Parket",parquetText:"Təbii ağacın zərifliyi",
+ laminate:"Laminat",laminateText:"Müasir və praktik seçim",
+ spcText:"Davamlı və estetik örtüklər",deckText:"Açıq məkanlar üçün",
+ furniture:"Mebel",furnitureText:"İnteryerə xüsusi xarakter",
+ interior:"İnteryer",interiorText:"İlham verən məkanlar",
+ aboutTitle:"Keyfiyyət detallarda gizlidir.",
+ aboutText:"Montcada parket, laminat, SPC, decking və mebel sahəsində fərqli seçimləri bir araya gətirir. Məqsədimiz hər məkan üçün estetik və praktik həllər təqdim etməkdir.",
+ contactUs:"BİZİMLƏ ƏLAQƏ",productTitle:"Sizə uyğun kolleksiya",
+ productText:"Məhsul kateqoriyalarımız arasında axtarış edin.",
+ details:"Ətraflı məlumat",noResults:"Nəticə tapılmadı.",
+ contactTitle:"Məkanınızı birlikdə yaradaq.",
+ contactText:"Məhsullarımız və kolleksiyalarımız barədə məlumat almaq üçün bizimlə əlaqə saxlayın.",
+ emailUs:"E-POÇT GÖNDƏR",top:"Yuxarı qayıt ↑",search:"Məhsul axtar..."
+ },
+ ru:{
+ home:"Главная",catalog:"Коллекции",about:"О нас",contact:"Контакты",
+ heroTitle:"Выбор, который преображает пространство.",
+ heroText:"Наполните интерьер характером с помощью подходящих напольных покрытий и интерьерных решений.",
+ discover:"СМОТРЕТЬ КОЛЛЕКЦИИ",collections:"Наши коллекции",
+ collectionsText:"Материалы и дизайн для любого пространства.",
+ parquet:"Паркет",parquetText:"Элегантность натурального дерева",
+ laminate:"Ламинат",laminateText:"Современный и практичный выбор",
+ spcText:"Прочные и эстетичные покрытия",deckText:"Для открытых пространств",
+ furniture:"Мебель",furnitureText:"Особый характер интерьера",
+ interior:"Интерьер",interiorText:"Пространства, вдохновляющие",
+ aboutTitle:"Качество кроется в деталях.",
+ aboutText:"Montcada объединяет разнообразные решения в сфере паркета, ламината, SPC, террасных покрытий и мебели. Наша цель — предлагать эстетичные и практичные решения.",
+ contactUs:"СВЯЗАТЬСЯ С НАМИ",productTitle:"Выберите свою коллекцию",
+ productText:"Найдите нужную категорию товаров.",
+ details:"Подробнее",noResults:"Ничего не найдено.",
+ contactTitle:"Создадим ваше пространство вместе.",
+ contactText:"Свяжитесь с нами, чтобы узнать больше о товарах и коллекциях.",
+ emailUs:"НАПИСАТЬ НА ПОЧТУ",top:"Наверх ↑",search:"Поиск товаров..."
+ },
+ en:{
+ home:"Home",catalog:"Collections",about:"About us",contact:"Contact",
+ heroTitle:"Choices that add value to your space.",
+ heroText:"Give your space a new character with flooring and interior solutions that suit your style.",
+ discover:"EXPLORE COLLECTIONS",collections:"Our collections",
+ collectionsText:"Materials and design choices for every space.",
+ parquet:"Parquet",parquetText:"The elegance of natural wood",
+ laminate:"Laminate",laminateText:"A modern and practical choice",
+ spcText:"Durable and stylish surfaces",deckText:"For outdoor spaces",
+ furniture:"Furniture",furnitureText:"A distinctive interior character",
+ interior:"Interiors",interiorText:"Spaces that inspire",
+ aboutTitle:"Quality lives in the details.",
+ aboutText:"Montcada brings together a range of parquet, laminate, SPC, decking and furniture options. Our goal is to offer aesthetic and practical solutions for every space.",
+ contactUs:"CONTACT US",productTitle:"Find your collection",
+ productText:"Search through our product categories.",
+ details:"Learn more",noResults:"No results found.",
+ contactTitle:"Let's create your space together.",
+ contactText:"Contact us to learn more about our products and collections.",
+ emailUs:"SEND EMAIL",top:"Back to top ↑",search:"Search products..."
+ }
+};
+function setLanguage(lang){
+ const t=translations[lang]||translations.az;
+ document.documentElement.lang=lang;
+ document.querySelectorAll("[data-t]").forEach(el=>{
+  const key=el.dataset.t;
+  if(t[key])el.textContent=t[key];
+ });
+ document.querySelectorAll("[data-placeholder]").forEach(el=>{
+  const key=el.dataset.placeholder;
+  if(t[key])el.placeholder=t[key];
+ });
+}
+document.getElementById("language").addEventListener("change",e=>setLanguage(e.target.value));
+document.getElementById("search").addEventListener("input",e=>{
+ const query=e.target.value.toLowerCase().trim();
+ let count=0;
+ document.querySelectorAll(".product-card").forEach(card=>{
+  const show=card.dataset.name.includes(query)||card.textContent.toLowerCase().includes(query);
+  card.style.display=show?"block":"none";
+  if(show)count++;
+ });
+ document.getElementById("empty").style.display=count?"none":"block";
+});
+function goContact(){document.getElementById("contact").scrollIntoView({behavior:"smooth"});}
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
