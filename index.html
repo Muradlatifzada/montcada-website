@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MONTCADA | Premium Interior</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#fff;color:#222}
+header{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee}
+.logo{font-size:27px;font-weight:800;letter-spacing:3px}
+nav a{margin-left:22px;text-decoration:none;color:#333;font-size:14px}
+.hero{min-height:490px;background:linear-gradient(110deg,#171a19,#454b45);color:white;padding:110px 8%}
+.hero p{color:#c6b99c;letter-spacing:4px;margin-bottom:22px}
+.hero h1{font-size:clamp(36px,6vw,65px);max-width:650px;line-height:1.15}
+.hero button{margin-top:32px;padding:16px 30px;background:#c4ad83;border:0;color:#171717;font-weight:bold}
+section{padding:65px 7%}
+h2{font-size:30px;margin-bottom:30px}
+.categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.item{background:#f2f0eb;padding:35px 25px;min-height:160px}
+.item h3{font-size:21px;margin-bottom:12px}
+.item p{color:#777;font-size:14px}
+footer{background:#191c1a;color:white;padding:45px 7%;line-height:2}
+@media(max-width:600px){
+header{padding:18px 5%}
+nav a{margin-left:9px;font-size:12px}
+.logo{font-size:21px}
+.hero{padding:90px 7%;min-height:400px}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">MONTCADA</div>
+<nav>
+<a href="#home">Ana səhifə</a>
+<a href="#products">Məhsullar</a>
+<a href="#contact">Əlaqə</a>
+</nav>
+</header>
+
+<div class="hero" id="home">
+<p>PREMIUM INTERIOR COLLECTION</p>
+<h1>Məkanınıza dəyər qatan seçimlər.</h1>
+<button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">KOLLEKSİYAYA BAX</button>
+</div>
+
+<section id="products">
+<h2>Məhsul kolleksiyamız</h2>
+<div class="categories">
+<div class="item"><h3>Parket</h3><p>Təbii ağacın zərifliyi</p></div>
+<div class="item"><h3>Laminat</h3><p>Müasir və praktik döşəmə</p></div>
+<div class="item"><h3>SPC</h3><p>Davamlı və estetik örtüklər</p></div>
+<div class="item"><h3>Decking</h3><p>Açıq məkanlar üçün həllər</p></div>
+<div class="item"><h3>Mebel</h3><p>İnteryerə xüsusi xarakter</p></div>
+</div>
+</section>
+
+<footer id="contact">
+<h2>MONTCADA</h2>
+Premium materiallar və interyer həlləri.
+<br>Əlaqə üçün bizimlə əlaqə saxlayın.
+</footer>
+</body>
+</html>
