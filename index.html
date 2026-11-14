@@ -19,7 +19,7 @@ header{height:82px;display:flex;align-items:center;justify-content:space-between
 .brand img{width:100%;height:100%;object-fit:contain;display:block} nav{display:flex;gap:24px;align-items:center}
 nav a{color:#e8e0d4;text-decoration:none;font:14px "Playfair Display",serif}
 nav a:hover{color:var(--gold)}
-.tools{color:var(--gold);font-size:19px;letter-spacing:12px}
+.tools{color:var(--gold);font-size:19px;letter-spacing:12px;margin-left:auto;display:flex;justify-content:flex-end;align-items:center;gap:24px}
 .hero{min-height:490px;position:relative;display:flex;align-items:center;background:linear-gradient(90deg,rgba(3,14,10,.9) 0%,rgba(3,14,10,.58) 34%,rgba(3,14,10,.05) 75%),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=90') center 54%/cover}
 .hero-copy{padding:65px 7.3%;max-width:540px}
 .eyebrow{font-size:10px;letter-spacing:4px;color:var(--gold);text-transform:uppercase}
@@ -110,13 +110,14 @@ align-items:center;
 }
 .brand{order:1}
 .tools{
-position:absolute;
-right:4%;
-top:38px;
+order:2;
+margin-left:auto;
 display:flex;
 align-items:center;
-white-space:nowrap;
+gap:12px;
 font-size:16px;
+white-space:nowrap;
+flex-shrink:0;
 }
 nav{
 order:3;
