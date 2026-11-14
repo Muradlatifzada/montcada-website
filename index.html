@@ -16,7 +16,7 @@ body{margin:0;background:var(--bg);color:var(--cream);font-family:"DM Sans",sans
 .top .right{color:var(--gold)}
 header{height:82px;position:relative;display:flex;align-items:center;justify-content:space-between;padding:0 0.5%;background:#08130f}
 .brand{width:200px;height:60px;display:flex;align-items:center;overflow:visible;color:var(--gold);font:600 27px "Playfair Display",serif;letter-spacing:3px;text-decoration:none;margin-left:+8px}
-.brand img{width:100%;height:100%;object-fit:contain;display:block} nav{display:flex;gap:24px;align-items:center}
+.brand img{width:100%;height:100%;object-fit:contain;display:block} nav{display:flex;gap:14px;align-items:center}
 nav a{color:#e8e0d4;text-decoration:none;font:14px "Playfair Display",serif}
 nav a:hover{color:var(--gold)}
 .tools{color:var(--gold);font-size:19px;letter-spacing:12px;position:absolute;right:20px;top:50%;transform:translateY(-50%);margin-left:0}
@@ -133,6 +133,65 @@ text-align:left;
 margin:0 auto;
 }
 }
+.showcase{
+  width:100%;
+  padding:75px 8%;
+  background:radial-gradient(ellipse at center,#17372b 0%,#07140f 75%);
+  text-align:center;
+  border-top:1px solid #ffffff12;
+  border-bottom:1px solid #ffffff12;
+}
+.showcase-content{
+  max-width:1100px;
+  margin:0 auto;
+}
+.showcase .eyebrow{
+  color:var(--gold);
+  letter-spacing:5px;
+  font-size:12px;
+}
+.showcase h2{
+  font:500 clamp(38px,5vw,64px) "Playfair Display",serif;
+  margin:18px 0;
+  color:var(--cream);
+}
+.showcase p{
+  font-size:17px;
+  color:#c8c8bd;
+  margin:0 auto 35px;
+  max-width:650px;
+}
+.showcase-benefits{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+  text-align:left;
+}
+.showcase-benefits>div{
+  border-left:1px solid #c5a36a66;
+  padding:8px 18px;
+}
+.showcase-benefits strong{
+  display:block;
+  color:var(--cream);
+  font:20px "Playfair Display",serif;
+  margin-bottom:10px;
+}
+.showcase-benefits small{
+  color:#bcbdb2;
+  font-size:13px;
+  line-height:1.6;
+}
+.showcase-counter{
+  color:var(--gold);
+  margin-top:35px;
+  letter-spacing:4px;
+  font-size:12px;
+}
+@media(max-width:700px){
+  .showcase{padding:50px 6%}
+  .showcase-benefits{grid-template-columns:1fr 1fr;gap:15px}
+}
 </style>
 </head>
 <body>
@@ -144,11 +203,9 @@ margin:0 auto;
 <header>
 <a class="brand" href="#"><img src="montcada-logo.webp" alt="MONTCADA"></a>
 <nav>
-<a href="#">Ana səhifə</a>
-<a href="#decking">Decking
-                (teras döşəməsi)</a>
-<a href="#divar paneli">Divar paneli</a>
 <a href="#mebel">Mebel</a>
+<a href="#decking">Decking<br><small>(Teras döşəməsi)</small></a>
+<a href="#divar-panelleri">Divar panelləri</a>
 <a href="#parket">Parket</a>
 <a href="#laminat">Laminat</a>
 <a href="#spc">SPC</a>
@@ -167,33 +224,60 @@ margin:0 auto;
 <div class="slide">01 / 03　 ━━━━━　 ‹　›</div>
 </div>
 </section>
+
 <section class="tiles">
-<a class="tile" href="#decking">
-<img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=85">
-<div class="label"><strong>Decking</strong><small>Açıq məkan döşəmələri</small></div><span class="arrow">→</span>
-</a>
+
 <a class="tile" id="mebel" href="#mebel">
 <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=85">
-<div class="label"><strong>Mebel</strong><small>Daxili və xarici məkan mebelləri</small></div><span class="arrow">→</span>
+<div class="label"><strong>Mebel</strong><small>Daxili və xarici məkan mebelləri</small></div>
+<span class="arrow">→</span>
 </a>
+
+<a class="tile" href="#decking">
+<img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=85">
+<div class="label"><strong>Decking</strong><small>Teras döşəməsi</small></div>
+<span class="arrow">→</span>
+</a>
+
+<a class="tile" id="divar-panelleri" href="#divar-panelleri">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=85">
+<div class="label"><strong>Divar panelləri</strong><small>Daxili divar üzlükləri</small></div>
+<span class="arrow">→</span>
+</a>
+
 <a class="tile" id="parket" href="#parket">
 <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700&q=85">
-<div class="label"><strong>Parket</strong><small>Təbii ağacın zərifliyi</small></div><span class="arrow">→</span>
+<div class="label"><strong>Parket</strong><small>Təbii ağacın zərifliyi</small></div>
+<span class="arrow">→</span>
 </a>
+
 <a class="tile" id="laminat" href="#laminat">
 <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=700&q=85">
-<div class="label"><strong>Laminat</strong><small>Davamlı və praktik döşəmə</small></div><span class="arrow">→</span>
+<div class="label"><strong>Laminat</strong><small>Davamlı və praktik döşəmə</small></div>
+<span class="arrow">→</span>
 </a>
+
 <a class="tile" id="spc" href="#spc">
 <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=85">
-<div class="label"><strong>SPC</strong><small>Suya davamlı, universal həll</small></div><span class="arrow">→</span>
+<div class="label"><strong>SPC</strong><small>Suya davamlı, universal həll</small></div>
+<span class="arrow">→</span>
 </a>
+  
 </section>
-<section class="benefits">
-<div class="benefit"><span class="ico">◇</span><div><strong>Premium Keyfiyyət</strong><small>Beynəlxalq standartlara uyğun materiallar</small></div></div>
-<div class="benefit"><span class="ico">♧</span><div><strong>Uzunömürlülük</strong><small>İqlimə və rütubətə davamlı konstruksiya</small></div></div>
-<div class="benefit"><span class="ico">▱</span><div><strong>Peşəkar Quraşdırma</strong><small>Təcrübəli komanda və keyfiyyətli montaj</small></div></div>
-<div class="benefit"><span class="ico">♧</span><div><strong>Sürətli Təchizat</strong><small>Bakı və regionlara etibarlı çatdırılma</small></div></div>
+  
+<section class="showcase" id="showcase">
+  <div class="showcase-content">
+    <div class="eyebrow" id="showcase-label">MONTCADA</div>
+    <h2 id="showcase-title">Premium Decking</h2>
+    <p id="showcase-desc">Açıq məkanlar üçün estetik və davamlı həllər.</p>
+    <div class="showcase-benefits" id="showcase-benefits">
+      <div><strong>Premium Keyfiyyət</strong><small>Hava şəraitinə davamlı materiallar</small></div>
+      <div><strong>Uzunömürlülük</strong><small>İllərlə etibarlı istifadə</small></div>
+      <div><strong>Peşəkar Quraşdırma</strong><small>Keyfiyyətli montaj</small></div>
+      <div><strong>Geniş Seçim</strong><small>Müxtəlif rəng və modellər</small></div>
+    </div>
+    <div class="showcase-counter" id="showcase-counter">01 / 06</div>
+  </div>
 </section>
 <section class="collection" id="collections">
 <div>
