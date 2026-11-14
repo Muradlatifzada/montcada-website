@@ -14,12 +14,12 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--cream);font-family:"DM Sans",sans-serif}
 .top{height:36px;border-bottom:1px solid #ffffff20;display:flex;align-items:center;justify-content:space-between;padding:0 5.5%;font-size:10px;color:#d9d0bf;letter-spacing:.7px}
 .top .right{color:var(--gold)}
-header{height:82px;display:flex;align-items:center;justify-content:space-between;padding:0 5.5%;background:#08130f;position:relative;z-index:3;border-bottom:1px solid #ffffff14}
+header{height:82px;position:relative;display:flex;align-items:center;justify-content:space-between;padding:0 0.5%;background:#08130f}
 .brand{width:200px;height:60px;display:flex;align-items:center;overflow:visible;color:var(--gold);font:600 27px "Playfair Display",serif;letter-spacing:3px;text-decoration:none;margin-left:-25px}
 .brand img{width:100%;height:100%;object-fit:contain;display:block} nav{display:flex;gap:24px;align-items:center}
 nav a{color:#e8e0d4;text-decoration:none;font:14px "Playfair Display",serif}
 nav a:hover{color:var(--gold)}
-.tools{color:var(--gold);font-size:19px;letter-spacing:12px;margin-left:auto;display:flex;justify-content:flex-end;align-items:center;gap:24px}
+.tools{color:var(--gold);font-size:19px;letter-spacing:12px;position:absolute;right:20px;top:50%;transform:translateY(-50%);margin-left:0}
 .hero{min-height:490px;position:relative;display:flex;align-items:center;background:linear-gradient(90deg,rgba(3,14,10,.9) 0%,rgba(3,14,10,.58) 34%,rgba(3,14,10,.05) 75%),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=90') center 54%/cover}
 .hero-copy{padding:65px 7.3%;max-width:540px}
 .eyebrow{font-size:10px;letter-spacing:4px;color:var(--gold);text-transform:uppercase}
@@ -55,7 +55,7 @@ header{height:auto;min-height:75px;padding:8px 4%;flex-wrap:wrap}
 .brand{width:145px;font-size:23px}
 nav{order:3;width:100%;overflow:auto;gap:18px;padding:12px 0}
 nav a{white-space:nowrap;font-size:13px}
-.tools{order:2;margin-left:auto;display:flex;align-items:center;gap:12px;font-size:16px;white-space:nowrap;flex-shrink:0}
+.tools{order:2;margin-left:auto;display:flex;align-items:center;gap:12px;font-size:16px;white-space:nowrap;flex-shrink:0;position:static;transform:none}
 .hero{min-height:470px;background-position:60% center}
 .hero-copy{padding:55px 7%}
 .tiles{grid-template-columns:repeat(2,1fr);margin:12px 4%}
