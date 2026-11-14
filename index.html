@@ -99,6 +99,22 @@ footer{padding:28px 5.5%;border-top:1px solid #ffffff1a;color:#a9a294;display:fl
  footer{flex-direction:column;font-size:9px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+.showcase-content .eyebrow,
+.showcase-content h2,
+.showcase-content>p,
+.showcase-benefits,
+.showcase-content>.btn {
+  transition: opacity 0.9s ease, transform 0.9s ease !important;
+}
+
+.showcase-content.changing .eyebrow,
+.showcase-content.changing h2,
+.showcase-content.changing>p,
+.showcase-content.changing .showcase-benefits,
+.showcase-content.changing>.btn {
+  opacity: 0;
+  transform: translateY(12px);
+}
 </style>
 </head>
 <body>
