@@ -1,389 +1,83 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="az">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MONTCADA | İndoneziya Taxta Mebelləri</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MONTCADA | Wisanka Furniture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
 <style>
-:root {
-  --green:#032719;
-  --green2:#061f16;
-  --gold:#d6a64e;
-  --cream:#f4eddf;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;background:var(--green);color:var(--cream);
-  font-family:"DM Sans",sans-serif
-}
-a{color:inherit;text-decoration:none}
-.topbar{
-  height:36px;padding:0 5%;display:flex;align-items:center;
-  justify-content:space-between;border-bottom:1px solid #ffffff22;
-  color:var(--gold);font-size:12px
-}
-header{
-  height:78px;padding:0 5%;display:flex;align-items:center;
-  justify-content:space-between;background:#021d13;
-  border-bottom:1px solid #ffffff20;position:relative;z-index:5
-}
-.logo{
-  color:var(--gold);font-family:"Playfair Display",serif;
-  font-size:27px;font-weight:bold;letter-spacing:2px
-}
-.logo small{display:block;font:8px "DM Sans";letter-spacing:2px}
-nav{display:flex;align-items:center;gap:27px;font-size:14px}
-nav a:hover,nav a.active{color:var(--gold)}
-nav a.active{border-bottom:2px solid var(--gold);padding-bottom:8px}
-.menu-btn{display:none;background:none;color:var(--gold);border:0;font-size:28px}
-
-.hero{
-  height:510px;position:relative;overflow:hidden;
-  background:#10271c
-}
-.slides,.slide{
-  position:absolute;inset:0;width:100%;height:100%
-}
-.slide{
-  opacity:0;visibility:hidden;
-  transition:opacity 1.5s ease,visibility 1.5s ease;
-  background-size:cover;background-position:center;
-}
-.slide.active{opacity:1;visibility:visible}
-.hero-shade{
-  position:absolute;inset:0;z-index:1;
-  background:linear-gradient(90deg,#031e15 0%,rgba(3,30,21,.94) 27%,rgba(3,30,21,.48) 53%,transparent 100%)
-}
-.hero-content{
-  position:relative;z-index:2;height:100%;max-width:1400px;
-  margin:auto;padding:65px 6%;display:flex;flex-direction:column;
-  justify-content:center;align-items:flex-start
-}
-.eyebrow{
-  color:var(--gold);font-size:12px;letter-spacing:5px;
-  margin-bottom:18px;font-weight:600
-}
-.hero h1{
-  font:700 clamp(42px,5vw,65px)/1.08 "Playfair Display",serif;
-  max-width:590px;margin:0 0 18px
-}
-.hero p{font-size:16px;line-height:1.8;max-width:390px;margin:0 0 24px}
-.actions{display:flex;gap:14px;flex-wrap:wrap}
-.btn{
-  display:inline-block;padding:14px 22px;border:1px solid var(--gold);
-  color:var(--cream);font-size:14px;transition:.3s
-}
-.btn.primary{background:var(--gold);color:#1b170d}
-.btn:hover{background:#f0c778;color:#17130b}
-.slider-dots{
-  position:absolute;z-index:3;bottom:24px;left:6%;
-  display:flex;gap:13px;align-items:center
-}
-.slider-dot{
-  width:12px;height:12px;border-radius:50%;
-  border:2px solid #d6a64e;background:transparent;
-  padding:0;cursor:pointer;transition:.4s
-}
-.slider-dot.active{background:var(--cream);border-color:var(--cream);transform:scale(1.12)}
-.slider-arrows{
-  position:absolute;right:6%;bottom:20px;z-index:3;display:flex;gap:12px
-}
-.slider-arrows button{
-  width:43px;height:43px;border-radius:50%;border:1px solid var(--gold);
-  background:#031e1577;color:var(--gold);font-size:23px;cursor:pointer
-}
-.slider-arrows button:hover{background:var(--gold);color:#07190f}
-
-.benefits{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  padding:18px 5%;border-top:1px solid #ffffff25;
-  border-bottom:1px solid #ffffff25
-}
-.benefit{
-  display:flex;justify-content:center;align-items:center;gap:14px;
-  padding:10px;border-right:1px solid #ffffff30;font-size:14px
-}
-.benefit:last-child{border:0}
-.benefit span{font-size:27px;color:var(--gold)}
-
-.section{padding:55px 5% 60px;max-width:1500px;margin:auto}
-.kicker{color:var(--gold);font-size:11px;letter-spacing:5px;font-weight:600}
-.section h2{
-  font:600 clamp(30px,4vw,40px) "Playfair Display",serif;
-  margin:12px 0
-}
-.section-intro{font-size:14px;color:#d4cbbb;margin-bottom:28px}
-.category-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:18px
-}
-.category{
-  height:195px;position:relative;overflow:hidden;border:1px solid #b79a5c66;
-  border-radius:9px;background:#142b20
-}
-.category img{
-  width:100%;height:100%;object-fit:cover;transition:transform .6s
-}
-.category:hover img{transform:scale(1.06)}
-.category:after{
-  content:"";position:absolute;inset:35% 0 0;
-  background:linear-gradient(transparent,rgba(0,0,0,.88))
-}
-.category-info{position:absolute;z-index:1;bottom:13px;left:17px;right:15px}
-.category-info h3{
-  font:600 22px "Playfair Display",serif;margin:0 0 5px
-}
-.category-info p{font-size:12px;margin:0}
-.category-info b{float:right;color:var(--gold);font-size:24px}
-
-.wisanka{
-  display:grid;grid-template-columns:1.1fr 1fr;
-  background:#09291c;border-top:1px solid #ffffff20
-}
-.wisanka img{width:100%;height:390px;object-fit:cover}
-.wisanka-text{padding:55px 9%;align-self:center}
-.wisanka-text h2{
-  font:600 43px "Playfair Display",serif;margin:14px 0
-}
-.wisanka-text p{
-  line-height:1.9;font-size:14px;border-left:2px solid var(--gold);
-  padding-left:20px;color:#e2d8c7
-}
-footer{
-  padding:25px 5%;display:flex;justify-content:space-between;
-  border-top:1px solid #ffffff25;color:#c5b89f;font-size:11px
-}
-
-@media(max-width:850px){
-  header{height:65px}
-  nav{
-    display:none;position:absolute;top:65px;left:0;right:0;
-    background:#021d13;padding:20px 6%;flex-direction:column;
-    align-items:flex-start;gap:20px
-  }
-  nav.open{display:flex}
-  .menu-btn{display:block}
-  .hero{height:490px}
-  .hero-content{padding:50px 6%}
-  .hero h1{font-size:44px}
-  .benefits{grid-template-columns:repeat(2,1fr)}
-  .benefit:nth-child(2){border-right:0}
-  .benefit:nth-child(-n+2){border-bottom:1px solid #ffffff25}
-  .category-grid{grid-template-columns:repeat(2,1fr)}
-  .category{height:170px}
-  .wisanka{grid-template-columns:1fr}
-  .wisanka img{height:280px}
-  .wisanka-text{padding:35px 7%}
-}
-@media(max-width:520px){
-  .topbar{font-size:9px;padding:0 3%}
-  .logo{font-size:22px}
-  .hero{height:440px}
-  .hero h1{font-size:39px}
-  .hero p{font-size:14px;max-width:290px}
-  .hero-content{padding:35px 6%}
-  .btn{padding:12px 14px;font-size:12px}
-  .slider-dots{left:6%;bottom:20px;gap:9px}
-  .slider-dot{width:10px;height:10px}
-  .slider-arrows{right:5%;bottom:12px}
-  .slider-arrows button{width:34px;height:34px}
-  .benefit{font-size:11px;gap:8px;padding:12px 3px}
-  .benefit span{font-size:21px}
-  .section{padding:40px 5%}
-  .category-grid{gap:10px}
-  .category{height:145px}
-  .category-info{left:10px;bottom:10px}
-  .category-info h3{font-size:17px}
-  .category-info p{font-size:10px}
-  .wisanka-text h2{font-size:35px}
-  footer{gap:10px;flex-wrap:wrap}
-}
-</style>
-</head>
-
+:root{--bg:#07140f;--panel:#0c1d16;--green:#123e2d;--gold:#c5a36a;--cream:#eee6d8;--muted:#b6b1a6;--line:rgba(197,163,106,.28)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}
+.top{min-height:36px;padding:7px 5%;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--gold);font-size:11px;border-bottom:1px solid var(--line)}
+header{height:76px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:var(--bg);border-bottom:1px solid var(--line);position:relative;z-index:5}
+.logo img{width:175px;height:58px;object-fit:contain;display:block}nav{display:flex;gap:23px;align-items:center;font-size:14px}nav a{white-space:nowrap;transition:color .25s}nav a:hover,nav .active{color:var(--gold)}.menu{display:none;background:none;border:1px solid var(--line);color:var(--gold);font-size:24px;padding:5px 10px}
+.hero{height:510px;position:relative;overflow:hidden;background:var(--panel)}.slides,.slide{position:absolute;inset:0;width:100%;height:100%}.slide{opacity:0;visibility:hidden;background-size:cover;background-position:center;transition:opacity 1.7s ease,visibility 1.7s ease}.slide.active{opacity:1;visibility:visible}
+.shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(7,20,15,.98),rgba(7,20,15,.88) 28%,rgba(7,20,15,.43) 57%,rgba(7,20,15,.05))}
+.hero-content{position:relative;z-index:2;height:100%;padding:55px 6%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.kicker{color:var(--gold);font-size:11px;letter-spacing:5px;font-weight:600}
+.hero h1{font:700 clamp(42px,5vw,65px)/1.08 "Playfair Display",serif;max-width:570px;margin:18px 0;color:var(--cream)}.hero p{font-size:15px;line-height:1.75;max-width:390px;margin:0 0 24px;color:#e2dbcf}
+.actions{display:flex;gap:14px;flex-wrap:wrap}.btn{padding:14px 22px;border:1px solid var(--gold);font-size:13px;transition:.25s}.btn:hover{background:var(--gold);color:#17140e}.btn.primary{background:var(--gold);color:#17140e}
+.dots{position:absolute;z-index:3;bottom:25px;left:6%;display:flex;gap:12px}.dot{width:12px;height:12px;border-radius:50%;border:1.5px solid var(--gold);background:transparent;padding:0;cursor:pointer;transition:background .3s,transform .3s}.dot.active{background:var(--cream);border-color:var(--cream);transform:scale(1.08)}
+.arrows{position:absolute;right:5%;bottom:19px;z-index:3;display:flex;gap:12px}.arrows button{width:43px;height:43px;border:1px solid var(--gold);border-radius:50%;background:rgba(7,20,15,.55);color:var(--gold);font-size:25px;cursor:pointer}
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);padding:17px 5%;border-block:1px solid var(--line);background:var(--panel)}.benefit{display:flex;align-items:center;justify-content:center;gap:14px;padding:10px;border-right:1px solid var(--line);font-size:13px}.benefit:last-child{border:0}.benefit span{font-size:25px;color:var(--gold)}
+.section{padding:52px 5% 28px;max-width:1600px;margin:auto}.section h2{font:600 clamp(30px,4vw,40px) "Playfair Display",serif;margin:12px 0;color:var(--cream)}.intro{font-size:13px;color:var(--muted);margin:0 0 25px}
+.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.category{height:195px;position:relative;overflow:hidden;border:1px solid var(--line);border-radius:8px;background:var(--panel)}.category img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.category:hover img{transform:scale(1.055)}.category:after{content:"";position:absolute;inset:30% 0 0;background:linear-gradient(transparent,rgba(7,20,15,.94))}
+.cattext{position:absolute;z-index:1;bottom:13px;left:15px;right:14px}.cattext h3{font:600 20px "Playfair Display",serif;margin:0 0 4px}.cattext p{font-size:11px;margin:0;color:#e6dfd2}.cattext b{float:right;color:var(--gold);font-size:22px}
+.wisanka{display:grid;grid-template-columns:1fr 1fr;margin-top:30px;border-top:1px solid var(--line);background:var(--panel)}.wisanka img{width:100%;height:360px;object-fit:cover;display:block}.wtext{padding:45px 9%;align-self:center}.wtext h2{font:600 42px "Playfair Display",serif;margin:12px 0;color:var(--cream)}.wtext p{line-height:1.85;font-size:14px;color:#ded6c9;border-left:2px solid var(--gold);padding-left:20px}
+footer{padding:22px 5%;display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);font-size:10px;letter-spacing:1px;color:var(--muted)}
+@media(max-width:1050px){nav{gap:13px;font-size:12px}.logo img{width:145px}.category{height:175px}}
+@media(max-width:800px){header{height:65px}.menu{display:block}nav{display:none;position:absolute;top:65px;left:0;right:0;background:var(--bg);padding:22px 6%;flex-direction:column;align-items:flex-start;gap:19px;border-bottom:1px solid var(--line)}nav.open{display:flex}.hero{height:470px}.hero-content{padding:35px 6%}.hero h1{font-size:43px}.benefits{grid-template-columns:repeat(2,1fr)}.benefit:nth-child(2){border-right:0}.benefit:nth-child(-n+2){border-bottom:1px solid var(--line)}.wisanka{grid-template-columns:1fr}.wisanka img{height:290px}}
+@media(max-width:520px){.top{font-size:8px;padding:7px 3%}.logo img{width:145px;height:52px}.hero{height:445px}.hero h1{font-size:38px}.hero p{font-size:13px;max-width:290px}.btn{padding:12px 14px;font-size:11px}.dots{gap:8px;bottom:19px}.dot{width:10px;height:10px}.arrows{bottom:11px;right:4%}.arrows button{width:34px;height:34px;font-size:20px}.benefit{font-size:10px;gap:7px;padding:12px 2px}.benefit span{font-size:20px}.section{padding:38px 4% 20px}.categories{grid-template-columns:repeat(2,1fr);gap:10px}.category{height:155px}.cattext{left:9px;bottom:9px}.cattext h3{font-size:16px}.cattext p{font-size:9px}.wtext{padding:32px 7%}.wtext h2{font-size:34px}footer{flex-wrap:wrap;font-size:9px}}
+</style></head>
 <body>
-
-<div class="topbar">
-  <span>☎ +994 70 364 03 09　 ☎ +994 55 204 65 98　 ✉ info@montcada.az</span>
-  <span>AZ　 RU　 EN</span>
-</div>
-
+<div class="top"><span>☎ +994 70 364 03 09　 ☎ +994 55 204 65 98　 ✉ info@montcada.az</span><span>AZ　 RU　 EN</span></div>
 <header>
-  <a class="logo" href="index.html">MONTCADA<small>PREMIUM MATERIALS & FURNITURE</small></a>
-  <button class="menu-btn" id="menuBtn" aria-label="Menyunu aç">☰</button>
-  <nav id="mainNav">
-    <a href="index.html">Ana səhifə</a>
-    <a class="active" href="mebel.html">Mebel</a>
-    <a href="decking.html">Decking</a>
-    <a href="index.html#divar-panelleri">Divar panelləri</a>
-    <a href="index.html#parket">Parket</a>
-    <a href="index.html#laminat">Laminat</a>
-    <a href="index.html#spc">SPC</a>
-    <a href="index.html#projects">Layihələr</a>
-    <a href="index.html#contact">Əlaqə</a>
-  </nav>
+<a class="logo" href="index.html" aria-label="MONTCADA ana səhifə"><img src="montcada-logo.webp" alt="MONTCADA"></a>
+<button class="menu" id="menu" aria-label="Menyunu aç">☰</button>
+<nav id="nav"><a href="index.html">Ana səhifə</a><a class="active" href="mebel.html">Mebel</a><a href="decking.html">Decking</a><a href="index.html#divar-panelleri">Divar panelləri</a><a href="index.html#parket">Parket</a><a href="index.html#laminat">Laminat</a><a href="index.html#spc">SPC</a><a href="index.html#projects">Layihələr</a><a href="index.html#contact">Əlaqə</a></nav>
 </header>
-
-<section class="hero">
-  <div class="slides" id="slides">
-    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1900&q=85')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1900&q=85')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1900&q=85')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1900&q=85')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=1900&q=85')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1900&q=85')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1900&q=85')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1900&q=85')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1900&q=85')"></div>
-  </div>
-
-  <div class="hero-shade"></div>
-
-  <div class="hero-content">
-    <div class="eyebrow">MONTCADA × WISANKA</div>
-    <h1 id="heroTitle">İndoneziya<br>Taxta Mebelləri</h1>
-    <p id="heroDesc">Təbii ağacın gözəlliyi, ustalıqla işlənmiş detallar və zövqlü dizayn.</p>
-    <div class="actions">
-      <a class="btn primary" href="#collections">Mebellərə bax　→</a>
-      <a class="btn" href="#wisanka">Wisanka haqqında</a>
-    </div>
-  </div>
-
-  <div class="slider-dots" id="sliderDots"></div>
-  <div class="slider-arrows">
-    <button id="prevSlide" aria-label="Əvvəlki şəkil">‹</button>
-    <button id="nextSlide" aria-label="Növbəti şəkil">›</button>
-  </div>
-</section>
-
-<section class="benefits">
-  <div class="benefit"><span>♧</span>Təbii ağac</div>
-  <div class="benefit"><span>♙</span>Zövqlü dizayn</div>
-  <div class="benefit"><span>⚒</span>Usta işi detallar</div>
-  <div class="benefit"><span>◇</span>Fərqli kolleksiyalar</div>
-</section>
-
-<section class="section" id="collections">
-  <div class="kicker">MEBEL KOLLEKSİYALARI</div>
-  <h2>Məkanınıza uyğun seçim</h2>
-  <p class="section-intro">Müxtəlif otaqlar üçün seçilmiş taxta mebel modelləri.</p>
-
-  <div class="category-grid">
-    <a class="category" href="#wisanka">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Taxta qonaq otağı mebeli">
-      <div class="category-info"><h3>Qonaq otağı</h3><p>Divan masaları və vitrinlər <b>→</b></p></div>
-    </a>
-    <a class="category" href="#wisanka">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Taxta yataq otağı mebeli">
-      <div class="category-info"><h3>Yataq otağı</h3><p>Çarpayı və komodlar <b>→</b></p></div>
-    </a>
-    <a class="category" href="#wisanka">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Taxta yemək masası">
-      <div class="category-info"><h3>Yemək otağı</h3><p>Masa və stullar <b>→</b></p></div>
-    </a>
-    <a class="category" href="#wisanka">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="Taxta ofis mebeli">
-      <div class="category-info"><h3>Ofis mebeli</h3><p>İş masaları və dolablar <b>→</b></p></div>
-    </a>
-    <a class="category" href="#wisanka">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Taxta dekorativ mebel">
-      <div class="category-info"><h3>Dekorativ mebel</h3><p>Konsollar və aksesuarlar <b>→</b></p></div>
-    </a>
-    <a class="category" href="#wisanka">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" alt="Bağ üçün taxta mebel">
-      <div class="category-info"><h3>Bağ mebeli</h3><p>Açıq məkanlar üçün <b>→</b></p></div>
-    </a>
-  </div>
-</section>
-
-<section class="wisanka" id="wisanka">
-  <img loading="lazy" src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=1200&q=85" alt="Təbii ağacdan hazırlanmış mebel detalı">
-  <div class="wisanka-text">
-    <div class="kicker">İNDONEZİYADAN</div>
-    <h2>Wisanka<br>Furniture</h2>
-    <p>MONTCADA kolleksiyasında İndoneziyanın Wisanka şirkətinə məxsus taxta mebellər təqdim olunur. Təbii ağacın özünəməxsus teksturası və zərif dizaynı interyerə fərqli xarakter qazandırır.</p>
-  </div>
-</section>
-
-<footer>
-  <span>MONTCADA · PREMIUM MATERIALS & FURNITURE</span>
-  <span>BAKI, AZƏRBAYCAN</span>
-  <span>© MONTCADA</span>
-</footer>
-
+<section class="hero"><div class="slides">
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1900&q=85')"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1900&q=85')"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1900&q=85')"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1900&q=85')"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1900&q=85')"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1900&q=85')"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=1900&q=85')"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1900&q=85')"></div>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1900&q=85')"></div>
+</div><div class="shade"></div>
+<div class="hero-content"><div class="kicker">MONTCADA × WISANKA</div><h1 id="heroTitle">Qonaq Otağı<br>Kolleksiyası</h1><p id="heroDesc">Təbii taxtadan hazırlanmış rahat və zövqlü qonaq otağı mebelləri.</p><div class="actions"><a class="btn primary" href="#collections">Mebellərə bax　→</a><a class="btn" href="#wisanka">Wisanka haqqında</a></div></div>
+<div class="dots" id="dots" aria-label="Slayd seçimi"></div><div class="arrows"><button id="prev" aria-label="Əvvəlki slayd">‹</button><button id="next" aria-label="Növbəti slayd">›</button></div></section>
+<section class="benefits"><div class="benefit"><span>♧</span>Təbii ağac</div><div class="benefit"><span>♙</span>Zövqlü dizayn</div><div class="benefit"><span>⚒</span>Usta işi detallar</div><div class="benefit"><span>◇</span>Fərqli kolleksiyalar</div></section>
+<section class="section" id="collections"><div class="kicker">MEBEL KOLLEKSİYALARI</div><h2>Məkanınıza uyğun seçim</h2><p class="intro">Müxtəlif otaqlar üçün seçilmiş taxta mebel modelləri.</p>
+<div class="categories">
+<a class="category" href="#wisanka"><img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="Qonaq otağı mebeli"><div class="cattext"><h3>Qonaq otağı</h3><p>Divan masaları və vitrinlər <b>→</b></p></div></a>
+<a class="category" href="#wisanka"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80" alt="Yataq otağı mebeli"><div class="cattext"><h3>Yataq otağı</h3><p>Çarpayı və komodlar <b>→</b></p></div></a>
+<a class="category" href="#wisanka"><img loading="lazy" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80" alt="Yemək otağı mebeli"><div class="cattext"><h3>Yemək otağı</h3><p>Masa və stullar <b>→</b></p></div></a>
+<a class="category" href="#wisanka"><img loading="lazy" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80" alt="Ofis mebeli"><div class="cattext"><h3>Ofis mebeli</h3><p>İş masaları və dolablar <b>→</b></p></div></a>
+<a class="category" href="#wisanka"><img loading="lazy" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80" alt="Dekorativ mebel"><div class="cattext"><h3>Dekorativ mebel</h3><p>Konsollar və aksesuarlar <b>→</b></p></div></a>
+<a class="category" href="#wisanka"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80" alt="Bağ mebeli"><div class="cattext"><h3>Bağ mebeli</h3><p>Açıq məkanlar üçün <b>→</b></p></div></a>
+</div></section>
+<section class="wisanka" id="wisanka"><img loading="lazy" src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=1100&q=85" alt="Taxta mebel interyeri"><div class="wtext"><div class="kicker">İNDONEZİYADAN</div><h2>Wisanka Furniture</h2><p>MONTCADA kolleksiyasında İndoneziyanın Wisanka şirkətinə məxsus taxta mebellər təqdim olunur. Təbii ağacın özünəməxsus teksturası və zərif dizaynı interyerə fərqli xarakter qazandırır.</p></div></section>
+<footer><span>MONTCADA · PREMIUM MATERIALS & FURNITURE</span><span>BAKI, AZƏRBAYCAN</span><span>© MONTCADA</span></footer>
 <script>
-const slides = [...document.querySelectorAll(".slide")];
-const dotsBox = document.getElementById("sliderDots");
-const title = document.getElementById("heroTitle");
-const desc = document.getElementById("heroDesc");
-
-const slideTexts = [
-  ["İndoneziya<br>Taxta Mebelləri","Təbii ağacın gözəlliyi, ustalıqla işlənmiş detallar və zövqlü dizayn."],
-  ["Təbii Ağac<br>İncə Dizayn","Hər detalda təbii ağacın özünəməxsus gözəlliyi."],
-  ["Qonaq Otağı<br>Kolleksiyası","Rahatlıq və zəriflik bir arada."],
-  ["Yataq Otağı<br>Mebelləri","Eviniz üçün isti və rahat atmosfer."],
-  ["Yemək Otağı<br>Kolleksiyası","Ailəniz və qonaqlarınız üçün taxta masa və stullar."],
-  ["Usta İşi<br>Detallar","Keyfiyyətli material və diqqətlə işlənmiş detallar."],
-  ["Dekorativ<br>Mebel","İnteryerinizə xarakter qatan təbii ağac."],
-  ["Bağ Mebeli<br>Kolleksiyası","Açıq məkanlar üçün rahat və zövqlü seçim."],
-  ["Wisanka<br>Furniture","İndoneziya ağac sənətkarlığı MONTCADA təqdimatında."]
-];
-
-let current = 0;
-let timer;
-
-slides.forEach((slide, index) => {
-  const dot = document.createElement("button");
-  dot.className = "slider-dot" + (index === 0 ? " active" : "");
-  dot.setAttribute("aria-label", (index + 1) + " nömrəli slayda keç");
-  dot.addEventListener("click", () => showSlide(index, true));
-  dotsBox.appendChild(dot);
-});
-
-const dots = [...dotsBox.children];
-
-function showSlide(index, manual = false) {
-  current = (index + slides.length) % slides.length;
-
-  slides.forEach((slide, i) => {
-    slide.classList.toggle("active", i === current);
-    dots[i].classList.toggle("active", i === current);
-  });
-
-  title.style.opacity = "0";
-  desc.style.opacity = "0";
-
-  setTimeout(() => {
-    title.innerHTML = slideTexts[current][0];
-    desc.textContent = slideTexts[current][1];
-    title.style.opacity = "1";
-    desc.style.opacity = "1";
-  }, 450);
-
-  if (manual) resetTimer();
-}
-
-function resetTimer() {
-  clearInterval(timer);
-  timer = setInterval(() => showSlide(current + 1), 10000);
-}
-
-document.getElementById("nextSlide").addEventListener("click", () => showSlide(current + 1, true));
-document.getElementById("prevSlide").addEventListener("click", () => showSlide(current - 1, true));
-
-document.getElementById("menuBtn").addEventListener("click", () => {
-  document.getElementById("mainNav").classList.toggle("open");
-});
-
-document.querySelectorAll("#mainNav a").forEach(link => {
-  link.addEventListener("click", () => document.getElementById("mainNav").classList.remove("open"));
-});
-
-resetTimer();
-</script>
-</body>
-</html>
+const slides=[...document.querySelectorAll(".slide")],dotsBox=document.getElementById("dots"),title=document.getElementById("heroTitle"),desc=document.getElementById("heroDesc");
+const content=[
+["Qonaq Otağı<br>Kolleksiyası","Təbii taxtadan hazırlanmış rahat və zövqlü qonaq otağı mebelləri."],
+["Yemək Otağı<br>Kolleksiyası","Ailəniz və qonaqlarınız üçün taxta masa və stullar."],
+["Yataq Otağı<br>Mebelləri","Rahatlıq və zəriflik bir arada. Təbii ağacdan yataq dəstləri."],
+["Dekorativ<br>Mebel","İnteryerinizə xarakter qatan taxta mebel və aksesuarlar."],
+["Bağ Mebeli<br>Kolleksiyası","Açıq məkanlar üçün rahat və davamlı taxta mebellər."],
+["Müasir Taxta<br>Mebel Dizaynı","Təbii ağacın gözəlliyi və funksional dizayn."],
+["Ofis Mebeli<br>Kolleksiyası","İş məkanları üçün zövqlü taxta masa və dolablar."],
+["Wisanka<br>Furniture","İndoneziya ağac sənətkarlığı MONTCADA təqdimatında."],
+["Təbii Ağacın<br>Gözəlliyi","Usta işi detallar və seçilmiş taxta mebel modelləri."]];
+let current=0,timer;
+slides.forEach((s,i)=>{const d=document.createElement("button");d.className="dot"+(i===0?" active":"");d.type="button";d.setAttribute("aria-label","Slayd "+(i+1));d.addEventListener("click",()=>show(i,true));dotsBox.appendChild(d)});
+const dots=[...dotsBox.children];
+function show(i,manual=false){current=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle("active",n===current));dots.forEach((d,n)=>d.classList.toggle("active",n===current));title.innerHTML=content[current][0];desc.textContent=content[current][1];if(manual)reset()}
+function reset(){clearInterval(timer);timer=setInterval(()=>show(current+1),10000)}
+document.getElementById("next").addEventListener("click",()=>show(current+1,true));document.getElementById("prev").addEventListener("click",()=>show(current-1,true));
+document.getElementById("menu").addEventListener("click",()=>document.getElementById("nav").classList.toggle("open"));
+document.querySelectorAll("#nav a").forEach(a=>a.addEventListener("click",()=>document.getElementById("nav").classList.remove("open")));reset();
+</script></body></html>
