@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="theme-color" content="#07140f">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MONTCADA | Divar panelləri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#071f16;--green:#0b2b1e;--gold:#c59a4a;--cream:#eee8d8;--muted:#b6b6a6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif}a{text-decoration:none;color:inherit}
+.topbar{min-height:36px;border-bottom:1px solid #ffffff22;display:flex;align-items:center;justify-content:space-between;padding:7px 5%;font-size:12px;color:var(--gold);gap:12px}.topbar span{margin-right:20px}
+header{min-height:68px;display:flex;align-items:center;justify-content:space-between;padding:12px 5%;gap:20px;background:#061b13;border-bottom:1px solid #ffffff20}
+.logo{font-family:'Playfair Display',serif;font-size:27px;font-weight:bold;color:var(--gold);letter-spacing:2px;white-space:nowrap}.logo small{display:block;font-family:'DM Sans',sans-serif;font-size:8px;letter-spacing:2px}
+nav{display:flex;gap:23px;align-items:center;font-size:14px;white-space:nowrap}nav a:hover,nav a.active{color:var(--gold)}nav a.active{border-bottom:2px solid var(--gold);padding-bottom:8px}
+.hero{min-height:440px;position:relative;display:flex;align-items:center;overflow:hidden;background:#10271c}.hero-slides,.hero-slides img{position:absolute;inset:0;width:100%;height:100%}.hero-slides img{object-fit:cover;opacity:0;transition:opacity 1.5s ease}.hero-slides img.active{opacity:1}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#061d14 0%,rgba(6,29,20,.91) 30%,rgba(6,29,20,.35) 68%,rgba(6,29,20,.08))}
+.hero-content{position:relative;z-index:2;padding:55px 6%;max-width:650px}.kicker{color:var(--gold);letter-spacing:5px;font-size:13px;font-weight:600}
+h1,h2,h3{font-family:'Playfair Display',serif}.hero h1{font-size:clamp(42px,5vw,66px);line-height:1.08;margin:16px 0}.hero p{font-size:18px;line-height:1.6;max-width:440px}
+.buttons{display:flex;gap:18px;margin-top:25px;flex-wrap:wrap}.btn{display:inline-block;padding:14px 25px;border:1px solid var(--gold);color:var(--cream);font-size:14px;transition:.3s}.btn.primary{background:var(--gold);color:#102016}.btn:hover{background:#e0b761;color:#102016}
+.slide-controls{position:absolute;z-index:3;left:6%;bottom:25px;display:flex;gap:13px}.slide-dot{width:13px;height:13px;border:2px solid var(--gold);border-radius:50%;cursor:pointer;background:transparent;padding:0}.slide-dot.active{background:var(--gold)}
+.arrows{position:absolute;right:5%;bottom:22px;z-index:3;display:flex;gap:15px}.arrows button{width:45px;height:45px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);background:#061d14aa;font-size:25px;cursor:pointer}
+.features{display:grid;grid-template-columns:repeat(4,1fr);padding:17px 5%;border-top:1px solid #ffffff22;border-bottom:1px solid #ffffff22;background:#062318}.feature{text-align:center;padding:8px;border-right:1px solid #ffffff33;font-size:15px}.feature:last-child{border:0}.feature b{color:var(--gold);font-size:23px;margin-right:12px}
+.section{padding:58px 5%}.section-title{margin-bottom:28px}.section-title h2{font-size:36px;margin:8px 0}.section-title p{color:var(--muted)}
+.panel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.panel-card{height:235px;position:relative;overflow:hidden;border:1px solid #b9975b88;border-radius:10px}.panel-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.panel-card:hover img{transform:scale(1.06)}.panel-card:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.88))}
+.panel-label{position:absolute;z-index:2;bottom:16px;left:17px;right:15px}.panel-label h3{font-size:21px;margin:0 0 5px}.panel-label p{font-size:13px;margin:0}.panel-label span{float:right;color:var(--gold);font-size:24px}
+.about{display:grid;grid-template-columns:1fr 1fr;background:#0a291d;border-top:1px solid #ffffff22}.about img{width:100%;height:100%;min-height:340px;object-fit:cover}.about-text{padding:50px 8%}.about-text h2{font-size:40px;margin:10px 0}.about-text p{line-height:1.8;color:#ded9ca}.about-list{margin-top:20px;color:var(--gold);line-height:2.5}
+footer{padding:25px 5%;border-top:1px solid #ffffff22;display:flex;justify-content:space-between;color:var(--muted);font-size:11px;letter-spacing:1px}
+@media(max-width:900px){nav{gap:13px;font-size:12px}.panel-card{height:190px}}
+@media(max-width:600px){.topbar{font-size:9px;padding:7px 3%;flex-wrap:wrap}.topbar span{margin-right:8px}header{padding:12px 4%;flex-wrap:wrap}.logo{font-size:22px}nav{width:100%;overflow-x:auto;padding:10px 0 3px;gap:18px}.hero{min-height:430px}.hero-content{padding:45px 6%}.hero h1{font-size:40px}.hero p{font-size:15px}.features{grid-template-columns:repeat(2,1fr);gap:10px}.feature{font-size:12px;border:0}.section{padding:40px 4%}.section-title h2{font-size:29px}.panel-grid{grid-template-columns:repeat(2,1fr);gap:10px}.panel-card{height:160px}.panel-label{left:11px;bottom:12px}.panel-label h3{font-size:15px}.panel-label p{font-size:10px}.about{grid-template-columns:1fr}.about img{min-height:230px}.about-text{padding:32px 6%}.about-text h2{font-size:31px}footer{gap:12px;flex-direction:column}}
+
+/* MONTCADA ana səhifəsi ilə eyni vizual standart */
+:root{--bg:#07140f;--panel:#0c1d16;--green:#123e2d;--gold:#c5a36a;--cream:#eee6d8;--muted:#b6b1a6}
+body{background:var(--bg);color:var(--cream);font-family:"DM Sans",sans-serif}
+.topbar{min-height:38px;height:auto;padding:7px 5.5%;background:#07140f;border-bottom:1px solid #ffffff20;color:#d9d0bf;font-size:11px;letter-spacing:.35px}
+.topbar a,.topbar span{color:inherit}
+header{min-height:88px;height:auto;padding:10px 5.5%;display:flex;align-items:center;justify-content:space-between;gap:28px;background:#08130f;border-bottom:1px solid #c5a36a28;position:relative;z-index:20}
+.brand{width:205px;height:65px;flex:0 0 205px;display:flex;align-items:center}
+.brand img{width:100%;height:100%;object-fit:contain}
+nav{display:flex;align-items:center;justify-content:flex-end;gap:clamp(12px,1.8vw,27px);flex:1;white-space:nowrap;overflow:visible}
+nav a{color:#eee6d8;text-decoration:none;font:15px "Playfair Display",serif;padding:0;border:0;transition:color .25s}
+nav a:hover,nav a.active{color:var(--gold)}
+.menu-toggle{display:none;background:transparent;color:var(--gold);border:1px solid #c5a36a88;border-radius:3px;font-size:23px;padding:5px 11px}
+.hero{background-color:#07140f}
+.section,.benefits,.features,.about,footer{color:var(--cream)}
+@media(max-width:1050px){header{gap:16px}.brand{width:175px;flex-basis:175px}nav{gap:12px}nav a{font-size:13px}}
+@media(max-width:850px){
+ header{min-height:75px;padding:10px 5%;flex-wrap:wrap}
+ .brand{width:175px;height:55px;flex-basis:175px}
+ .menu-toggle{display:block;margin-left:auto}
+ nav{display:none;position:absolute;top:100%;left:0;right:0;width:100%;padding:12px 5%;background:#08130f;border-top:1px solid #c5a36a28;flex-direction:column;align-items:stretch;gap:0;white-space:normal}
+ nav.open{display:flex}
+ nav a{padding:12px 4px;border-bottom:1px solid #c5a36a22;font-size:15px}
+}
+@media(max-width:520px){
+ .topbar{padding:7px 5%;font-size:10px}
+ .brand{width:155px;height:49px;flex-basis:155px}
+}
+
+</style>
+</head>
+<body>
+<div class="topbar"><div><span>☎ +994 70 364 03 09</span><span>☎ +994 55 204 65 98</span><span>✉ info@montcada.az</span></div><div>AZ　 RU　 EN</div></div>
+
+<header>
+ <a class="brand" href="index.html" aria-label="MONTCADA ana səhifə"><img src="montcada-logo.webp" alt="MONTCADA"></a>
+ <button class="menu-toggle" id="menuToggle" aria-label="Menyunu aç" aria-expanded="false">☰</button>
+ <nav id="mainNav">
+  <a href="mebel.html">Mebel</a>
+  <a href="decking.html">Decking</a>
+  <a href="divar-panelleri.html">Divar panelləri</a>
+  <a href="parket.html">Parket</a>
+  <a href="laminat.html">Laminat</a>
+  <a href="spc.html">SPC</a>
+  <a href="index.html#projects">Layihələr</a>
+  <a href="index.html#about">Haqqımızda</a>
+  <a href="index.html#contact">Əlaqə</a>
+ </nav>
+</header>
+
+<section class="hero">
+<div class="hero-slides" id="heroSlides">
+<img class="active" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="Müasir interyer">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="Divar paneli interyeri">
+<img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="Dekorativ divar">
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="Qonaq otağı">
+<img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="Müasir dizayn">
+<img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="İnteryer detalları">
+<img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="Dekorativ məkan">
+<img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="Divar dekoru">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="Premium interyer">
+</div>
+<div class="hero-content"><div class="kicker">MONTCADA · İNTERYER HƏLLƏRİ</div><h1>Divar Panelləri</h1><p>Müasir interyer üçün estetik, funksional və davamlı divar həlləri.</p><div class="buttons"><a href="#paneller" class="btn primary">Panellərə bax　→</a><a href="index.html#contact" class="btn">Layihə üçün məsləhət</a></div></div>
+<div class="slide-controls" id="slideDots" aria-label="Slayd seçimi"></div><div class="arrows"><button type="button" id="prev" aria-label="Əvvəlki slayd">‹</button><button type="button" id="next" aria-label="Növbəti slayd">›</button></div>
+</section>
+<section class="features"><div class="feature"><b>♧</b>Müasir dizayn</div><div class="feature"><b>▱</b>Davamlı material</div><div class="feature"><b>⚒</b>Peşəkar montaj</div><div class="feature"><b>♢</b>Fərqli teksturalar</div></section>
+<section class="section" id="paneller">
+<div class="section-title"><div class="kicker">DİVAR PANELLƏRİ KOLLEKSİYASI</div><h2>Məkanınıza uyğun seçim</h2><p>Müxtəlif material, tekstura və rəng seçimləri ilə divar panelləri.</p></div>
+<div class="panel-grid">
+<a class="panel-card" href="index.html#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=750&amp;q=80" alt="Reyka panel görünüşü"><div class="panel-label"><h3>Reyka panellər</h3><p>Zərif və müasir görünüş <span>→</span></p></div></a>
+<a class="panel-card" href="index.html#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=750&amp;q=80" alt="Dekorativ panel interyeri"><div class="panel-label"><h3>3D panellər</h3><p>Həcmli dekorativ dizayn <span>→</span></p></div></a>
+<a class="panel-card" href="index.html#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&amp;fit=crop&amp;w=750&amp;q=80" alt="Daş teksturalı interyer"><div class="panel-label"><h3>Daş effektli panellər</h3><p>Təbii tekstura görünüşü <span>→</span></p></div></a>
+<a class="panel-card" href="index.html#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=750&amp;q=80" alt="Yumşaq teksturalı interyer"><div class="panel-label"><h3>Tekstil panellər</h3><p>Rahat və isti atmosfer <span>→</span></p></div></a>
+<a class="panel-card" href="index.html#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=750&amp;q=80" alt="Dekorativ divar dizaynı"><div class="panel-label"><h3>Dekorativ panellər</h3><p>Fərqli interyer həlləri <span>→</span></p></div></a>
+<a class="panel-card" href="index.html#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&amp;fit=crop&amp;w=750&amp;q=80" alt="Taxta tonlu interyer"><div class="panel-label"><h3>Taxta görünüşlü</h3><p>Təbii və isti rənglər <span>→</span></p></div></a>
+</div></section>
+<section class="about"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&amp;fit=crop&amp;w=1100&amp;q=82" alt="Divar panelləri ilə interyer"><div class="about-text"><div class="kicker">MONTCADA · DİZAYN VƏ KEYFİYYƏT</div><h2>Məkanınıza dəyər qatın</h2><p>Divar panelləri interyerə müasir görünüş və fərqli xarakter qazandırır. Müxtəlif tekstura və rəng seçimləri yaşayış, ofis və kommersiya məkanları üçün uyğun həllər yaradır.</p><div class="about-list">◇ Estetik görünüş<br>◇ Müxtəlif tekstura və rənglər<br>◇ Layihəyə uyğun seçim<br>◇ Peşəkar məsləhət</div><a class="btn primary" href="index.html#contact">Bizimlə əlaqə　→</a></div></section>
+<footer><div>MONTCADA · PREMIUM MATERIALS &amp; FURNITURE</div><div>BAKI, AZƏRBAYCAN</div><div>© MONTCADA</div></footer>
+<script>
+const slides=[...document.querySelectorAll("#heroSlides img")];
+const dotsBox=document.getElementById("slideDots");
+let current=0,timer;
+slides.forEach((slide,i)=>{const dot=document.createElement("button");dot.type="button";dot.className="slide-dot"+(i===0?" active":"");dot.setAttribute("aria-label","Slayd "+(i+1));dot.addEventListener("click",()=>showSlide(i));dotsBox.appendChild(dot)});
+const dots=[...dotsBox.children];
+function showSlide(index){slides[current].classList.remove("active");dots[current].classList.remove("active");current=(index+slides.length)%slides.length;slides[current].classList.add("active");dots[current].classList.add("active");resetTimer()}
+function resetTimer(){clearInterval(timer);timer=setInterval(()=>showSlide(current+1),10000)}
+document.getElementById("prev").addEventListener("click",()=>showSlide(current-1));
+document.getElementById("next").addEventListener("click",()=>showSlide(current+1));
+resetTimer();
+</script>
+
+<script>
+(function(){
+ const button=document.getElementById("menuToggle");
+ const nav=document.getElementById("mainNav");
+ if(button && nav){
+  button.addEventListener("click",()=>{
+   const opened=nav.classList.toggle("open");
+   button.setAttribute("aria-expanded",String(opened));
+  });
+  nav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{
+   nav.classList.remove("open");
+   button.setAttribute("aria-expanded","false");
+  }));
+ }
+})();
+</script>
+
+</body>
+</html>
