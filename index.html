@@ -197,6 +197,20 @@ margin:0 auto;
   .showcase{padding:50px 6%}
   .showcase-benefits{grid-template-columns:1fr 1fr;gap:15px}
 }
+  .showcase.slide-change {
+  animation: showcaseSlide 0.9s ease;
+}
+
+@keyframes showcaseSlide {
+  from {
+    opacity: 0.4;
+    transform: translateX(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 </style>
 </head>
 <body>
@@ -268,6 +282,7 @@ margin:0 auto;
 const showcaseItems = [
 {
 title:"Premium Mebel",
+  image:"https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85",
 desc:"Daxili və xarici məkanlar üçün zövqlü mebel həlləri.",
 benefits:[
 ["◇","Premium Dizayn","Zövqlü və müasir görünüş"],
@@ -278,16 +293,18 @@ benefits:[
 },
 {
 title:"Premium Decking",
-desc:"Açıq məkanlar üçün estetik və uzunömürlü teras döşəmələri.",
+image:"https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1800&q=85",
+desc:"Açıq məkanlar üçün estetik və uzunömürlü terras döşəmələri.",
 benefits:[
 ["◇","Premium Keyfiyyət","Hava şəraitinə davamlı materiallar"],
 ["♧","Uzunömürlülük","İllərlə etibarlı istifadə"],
-["▱","Peşəkar Quraşdırma","Təcrübəli montaj komandası"],
+["—","Peşəkar Quraşdırma","Təcrübəli montaj komandası"],
 ["✥","Geniş Seçim","Müxtəlif rəng və modellər"]
 ]
 },
 {
 title:"Divar Panelləri",
+  image:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85",
 desc:"İnteryerinizə xüsusi görünüş verən müasir divar üzlükləri.",
 benefits:[
 ["◇","Müasir Dizayn","Zövqlü dekorativ görünüş"],
@@ -298,7 +315,8 @@ benefits:[
 },
 {
 title:"Təbii Parket",
-desc:"Təbii ağacın istiliyi və zərifliyi ilə seçilən döşəmələr.",
+  image:"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85",
+  desc:"Təbii ağacın istiliyi və zərifliyi ilə seçilən döşəmələr.",
 benefits:[
 ["◇","Təbii Ağac","Orijinal ağac teksturası"],
 ["♧","Zərif Görünüş","İnteryerə xüsusi xarakter"],
@@ -308,6 +326,7 @@ benefits:[
 },
 {
 title:"Laminat",
+  image:"https://images.unsplash.com/photo-1600566753190-17f0baa26c3a?auto=format&fit=crop&w=1800&q=85",
 desc:"Hər interyerə uyğun davamlı və praktik döşəmə həlləri.",
 benefits:[
 ["◇","Müasir Dizayn","Zəngin rəng və naxışlar"],
@@ -318,6 +337,7 @@ benefits:[
 },
 {
 title:"SPC Döşəmə",
+  image:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85",
 desc:"Suya davamlı və müasir məkanlar üçün universal döşəmə.",
 benefits:[
 ["◇","Suya Davamlılıq","Nəmə qarşı yüksək davamlılıq"],
@@ -331,11 +351,15 @@ benefits:[
 let currentShowcase = 0;
 
 function changeShowcase(){
+  const box = document.getElementById("showcase");
+box.classList.remove("slide-change");
+void box.offsetWidth;
+box.classList.add("slide-change");
 const item = showcaseItems[currentShowcase];
 
 document.getElementById("showcase-title").textContent = item.title;
 document.getElementById("showcase-desc").textContent = item.desc;
-
+document.getElementById("showcase").style.backgroundImage = `linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url("${item.image}")`;
 document.getElementById("showcase-benefits").innerHTML =
 item.benefits.map(b => `
 <div>
