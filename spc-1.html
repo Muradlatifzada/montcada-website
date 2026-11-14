@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="theme-color" content="#07140f">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MONTCADA | SPC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#071f16;--deep:#041a12;--gold:#c59a4a;--cream:#eee8d8;--muted:#b6b6a6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif}a{color:inherit;text-decoration:none}
+.topbar{min-height:36px;padding:7px 5%;display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #ffffff25;color:var(--gold);font-size:12px}.topbar span{margin-right:20px}
+header{min-height:68px;padding:12px 5%;display:flex;justify-content:space-between;align-items:center;gap:20px;background:var(--deep);border-bottom:1px solid #ffffff22}
+.logo{font:700 27px 'Playfair Display',serif;letter-spacing:2px;color:var(--gold);white-space:nowrap}.logo small{display:block;font:600 8px 'DM Sans',sans-serif;letter-spacing:2px}
+nav{display:flex;align-items:center;gap:23px;font-size:14px;white-space:nowrap}nav a:hover,nav a.active{color:var(--gold)}nav a.active{border-bottom:2px solid var(--gold);padding-bottom:8px}
+.hero{height:410px;position:relative;overflow:hidden;background:#18251c}.hero-images,.hero-images img{position:absolute;inset:0;width:100%;height:100%}.hero-images img{object-fit:cover;opacity:0;transition:opacity 1.35s ease}.hero-images img.active{opacity:1}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#041a12 0%,rgba(4,26,18,.93) 27%,rgba(4,26,18,.43) 53%,rgba(4,26,18,.04) 100%)}
+.hero-content{position:relative;z-index:2;padding:45px 6%;max-width:650px}.eyebrow{font-size:13px;letter-spacing:5px;font-weight:700;color:var(--gold)}h1,h2,h3{font-family:'Playfair Display',serif}.hero h1{font-size:clamp(46px,5vw,68px);line-height:1.04;margin:14px 0 8px}.hero p{font-size:18px;line-height:1.5;max-width:460px;margin:0}
+.actions{display:flex;gap:17px;flex-wrap:wrap;margin-top:23px}.btn{display:inline-block;padding:14px 24px;border:1px solid var(--gold);font-size:14px;transition:.25s}.btn.primary{background:var(--gold);color:#172016}.btn:hover{background:#e0b761;color:#172016}
+.dots{position:absolute;z-index:3;left:6%;bottom:23px;display:flex;gap:13px}.dot{width:14px;height:14px;border:2px solid var(--gold);border-radius:50%;padding:0;background:transparent;cursor:pointer}.dot.active{background:var(--gold)}
+.arrows{position:absolute;right:4%;bottom:20px;z-index:3;display:flex;gap:14px}.arrows button{width:46px;height:46px;border:1px solid var(--gold);border-radius:50%;background:#061d14cc;color:var(--gold);font-size:27px;cursor:pointer}
+.benefits{display:grid;grid-template-columns:repeat(5,1fr);padding:12px 4%;background:#062318;border-top:1px solid #ffffff22;border-bottom:1px solid #ffffff22}.benefit{display:flex;align-items:center;justify-content:center;gap:13px;padding:8px 12px;border-right:1px solid #ffffff30;font-size:14px}.benefit:last-child{border:0}.benefit b{font-size:27px;color:var(--gold);font-weight:400}
+.section{padding:42px 5% 28px}.section-head{margin-bottom:22px}.section-head h2{font-size:36px;margin:5px 0}.section-head p{color:var(--muted);margin:0}
+.products{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}.product{height:190px;position:relative;overflow:hidden;border:1px solid #b9975b88;border-radius:12px}.product img{width:100%;height:100%;object-fit:cover;transition:transform .55s}.product:hover img{transform:scale(1.06)}.product:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.88))}.product-info{position:absolute;z-index:2;left:14px;right:12px;bottom:13px}.product-info h3{font:600 18px 'DM Sans',sans-serif;margin:0 0 5px}.product-info p{font-size:12px;margin:0}.product-info span{float:right;color:var(--gold);font-size:24px}
+.about{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #ffffff22;background:#09271c;margin-top:24px}.about img{width:100%;height:100%;min-height:300px;object-fit:cover}.about-copy{padding:38px 7%;display:flex;flex-direction:column;justify-content:center}.about-copy h2{font-size:36px;margin:8px 0 12px}.about-copy p{color:#ded9ca;line-height:1.7;margin:0}.about-points{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px;color:var(--cream)}.about-points span:before{content:"◇";color:var(--gold);margin-right:9px}
+footer{display:flex;justify-content:space-between;gap:15px;padding:23px 5%;border-top:1px solid #ffffff22;color:var(--muted);font-size:11px;letter-spacing:1px}
+@media(max-width:1000px){nav{gap:13px;font-size:12px}.products{grid-template-columns:repeat(3,1fr)}.product{height:185px}}
+@media(max-width:650px){.topbar{font-size:9px;padding:7px 3%;flex-wrap:wrap}.topbar span{margin-right:8px}header{padding:12px 4%;flex-wrap:wrap}.logo{font-size:22px}nav{width:100%;overflow-x:auto;padding:10px 0 3px;gap:18px}.hero{height:430px}.hero-content{padding:42px 6%}.hero h1{font-size:44px}.hero p{font-size:15px}.benefits{grid-template-columns:repeat(2,1fr);gap:4px}.benefit{font-size:11px;border:0;justify-content:flex-start}.benefit b{font-size:22px}.section{padding:35px 4% 20px}.section-head h2{font-size:29px}.products{grid-template-columns:repeat(2,1fr);gap:10px}.product{height:155px}.product-info{left:10px;bottom:10px}.product-info h3{font-size:14px}.product-info p{font-size:10px}.about{grid-template-columns:1fr}.about img{min-height:220px}.about-copy{padding:28px 6%}.about-copy h2{font-size:30px}.arrows button{width:38px;height:38px}.dots{gap:9px}.dot{width:11px;height:11px}footer{flex-direction:column}}
+
+/* MONTCADA ana səhifəsi ilə eyni vizual standart */
+:root{--bg:#07140f;--panel:#0c1d16;--green:#123e2d;--gold:#c5a36a;--cream:#eee6d8;--muted:#b6b1a6}
+body{background:var(--bg);color:var(--cream);font-family:"DM Sans",sans-serif}
+.topbar{min-height:38px;height:auto;padding:7px 5.5%;background:#07140f;border-bottom:1px solid #ffffff20;color:#d9d0bf;font-size:11px;letter-spacing:.35px}
+.topbar a,.topbar span{color:inherit}
+header{min-height:88px;height:auto;padding:10px 5.5%;display:flex;align-items:center;justify-content:space-between;gap:28px;background:#08130f;border-bottom:1px solid #c5a36a28;position:relative;z-index:20}
+.brand{width:205px;height:65px;flex:0 0 205px;display:flex;align-items:center}
+.brand img{width:100%;height:100%;object-fit:contain}
+nav{display:flex;align-items:center;justify-content:flex-end;gap:clamp(12px,1.8vw,27px);flex:1;white-space:nowrap;overflow:visible}
+nav a{color:#eee6d8;text-decoration:none;font:15px "Playfair Display",serif;padding:0;border:0;transition:color .25s}
+nav a:hover,nav a.active{color:var(--gold)}
+.menu-toggle{display:none;background:transparent;color:var(--gold);border:1px solid #c5a36a88;border-radius:3px;font-size:23px;padding:5px 11px}
+.hero{background-color:#07140f}
+.section,.benefits,.features,.about,footer{color:var(--cream)}
+@media(max-width:1050px){header{gap:16px}.brand{width:175px;flex-basis:175px}nav{gap:12px}nav a{font-size:13px}}
+@media(max-width:850px){
+ header{min-height:75px;padding:10px 5%;flex-wrap:wrap}
+ .brand{width:175px;height:55px;flex-basis:175px}
+ .menu-toggle{display:block;margin-left:auto}
+ nav{display:none;position:absolute;top:100%;left:0;right:0;width:100%;padding:12px 5%;background:#08130f;border-top:1px solid #c5a36a28;flex-direction:column;align-items:stretch;gap:0;white-space:normal}
+ nav.open{display:flex}
+ nav a{padding:12px 4px;border-bottom:1px solid #c5a36a22;font-size:15px}
+}
+@media(max-width:520px){
+ .topbar{padding:7px 5%;font-size:10px}
+ .brand{width:155px;height:49px;flex-basis:155px}
+}
+
+</style>
+</head>
+<body>
+<div class="topbar"><div><span>☎ +994 70 364 03 09</span><span>☎ +994 55 204 65 98</span><span>✉ info@montcada.az</span></div><div>AZ　 RU　 EN</div></div>
+
+<header>
+ <a class="brand" href="index.html" aria-label="MONTCADA ana səhifə"><img src="montcada-logo.webp" alt="MONTCADA"></a>
+ <button class="menu-toggle" id="menuToggle" aria-label="Menyunu aç" aria-expanded="false">☰</button>
+ <nav id="mainNav">
+  <a href="mebel.html">Mebel</a>
+  <a href="decking.html">Decking</a>
+  <a href="divar-panelleri.html">Divar panelləri</a>
+  <a href="parket.html">Parket</a>
+  <a href="laminat.html">Laminat</a>
+  <a href="spc.html">SPC</a>
+  <a href="index.html#projects">Layihələr</a>
+  <a href="index.html#about">Haqqımızda</a>
+  <a href="index.html#contact">Əlaqə</a>
+ </nav>
+</header>
+
+<section class="hero">
+<div class="hero-images" id="heroImages">
+<img class="active" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="SPC döşəməli müasir qonaq otağı">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="Təbii ağac görünüşlü döşəmə">
+<img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="Müasir açıq interyer">
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="Zərif döşəmə dizaynı">
+<img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="Premium interyer">
+<img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="Taxta teksturalı otaq">
+<img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="İsti tonlarda ev interyeri">
+<img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="Müasir yaşayış sahəsi">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1800&amp;q=82" alt="SPC kolleksiya görünüşü">
+</div>
+<div class="hero-content"><div class="eyebrow">MÜASİR DÖŞƏMƏ HƏLLƏRİ</div><h1>SPC Döşəmə</h1><p>Gündəlik istifadə üçün möhkəm, praktik və zövqlü döşəmə həlli. Müasir interyerlərə uyğun dekor və tekstura seçimi.</p><div class="actions"><a class="btn primary" href="#kolleksiya">SPC kolleksiyalarına bax →</a><a class="btn" href="#melumat">SPC haqqında</a></div></div>
+<div class="dots" id="dots" aria-label="Slayd seçimi"></div><div class="arrows"><button id="prev" aria-label="Əvvəlki slayd">‹</button><button id="next" aria-label="Növbəti slayd">›</button></div>
+</section>
+<section class="benefits">
+<div class="benefit"><b>◇</b>Suya davamlı səth</div><div class="benefit"><b>▱</b>Möhkəm konstruksiya</div><div class="benefit"><b>⌂</b>İstifadə rahatlığı</div><div class="benefit"><b>⚙</b>Praktik quraşdırma</div><div class="benefit"><b>♧</b>Ağac dekorları</div>
+</section>
+<section class="section" id="kolleksiya">
+<div class="section-head"><div class="eyebrow">SPC KOLLEKSİYALARI</div><h2>Məkanınıza uyğun SPC seçimi</h2><p>Müxtəlif rəng və ağac teksturalı dekorlarla interyerinizə uyğun modeli seçin.</p></div>
+<div class="products">
+<a class="product" href="index.html#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Açıq palıd SPC dekoru"><div class="product-info"><h3>Natural Oak</h3><p>Təbii palıd görünüşü <span>→</span></p></div></a>
+<a class="product" href="index.html#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Tünd ağac SPC dekoru"><div class="product-info"><h3>Classic Walnut</h3><p>Dərin və isti tonlar <span>→</span></p></div></a>
+<a class="product" href="index.html#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Boz SPC döşəmə dekoru"><div class="product-info"><h3>Urban Grey</h3><p>Müasir boz çalarlar <span>→</span></p></div></a>
+<a class="product" href="index.html#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Açıq bej SPC dekoru"><div class="product-info"><h3>Soft Beige</h3><p>Sakit və işıqlı interyer <span>→</span></p></div></a>
+<a class="product" href="index.html#contact"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Tünd palıd SPC dekoru"><div class="product-info"><h3>Dark Oak</h3><p>Klassik ağac teksturası <span>→</span></p></div></a>
+</div>
+</section>
+<section class="about" id="melumat">
+<img loading="lazy" src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&amp;fit=crop&amp;w=1100&amp;q=82" alt="Müasir SPC döşəmə interyeri">
+<div class="about-copy"><div class="eyebrow">SPC DÖŞƏMƏ HAQQINDA</div><h2>Gündəlik həyat üçün praktik həll</h2><p>SPC döşəmə daş-polimer kompozit əsaslı çoxqatlı döşəmə örtüyüdür. Sabit konstruksiyası və dekorativ üst qatı ilə yaşayış və kommersiya məkanlarında istifadə üçün nəzərdə tutulur. Məhsul seçərkən qalınlıq, aşınma qatı, altlıq və istehsalçı göstəricilərini nəzərə almaq vacibdir.</p><div class="about-points"><span>Suya davamlılıq</span><span>Dayanıqlı əsas</span><span>Müxtəlif dekorlar</span><span>Asan qulluq</span></div></div>
+</section>
+<footer><div>MONTCADA · PREMIUM MATERIALS &amp; FURNITURE</div><div>BAKI, AZƏRBAYCAN</div><div>© MONTCADA</div></footer>
+<script>
+const slides=[...document.querySelectorAll("#heroImages img")],dotsBox=document.getElementById("dots");let current=0,timer;
+slides.forEach((s,i)=>{const b=document.createElement("button");b.className="dot"+(i===0?" active":"");b.type="button";b.setAttribute("aria-label","Slayd "+(i+1));b.addEventListener("click",()=>show(i));dotsBox.appendChild(b)});
+const dots=[...dotsBox.children];
+function show(i){slides[current].classList.remove("active");dots[current].classList.remove("active");current=(i+slides.length)%slides.length;slides[current].classList.add("active");dots[current].classList.add("active");reset()}
+function reset(){clearInterval(timer);timer=setInterval(()=>show(current+1),10000)}
+document.getElementById("prev").addEventListener("click",()=>show(current-1));document.getElementById("next").addEventListener("click",()=>show(current+1));reset();
+</script>
+
+<script>
+(function(){
+ const button=document.getElementById("menuToggle");
+ const nav=document.getElementById("mainNav");
+ if(button && nav){
+  button.addEventListener("click",()=>{
+   const opened=nav.classList.toggle("open");
+   button.setAttribute("aria-expanded",String(opened));
+  });
+  nav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{
+   nav.classList.remove("open");
+   button.setAttribute("aria-expanded","false");
+  }));
+ }
+})();
+</script>
+
+</body>
+</html>
