@@ -55,7 +55,7 @@ header{height:auto;min-height:75px;padding:8px 4%;flex-wrap:wrap}
 .brand{width:145px;font-size:23px}
 nav{order:3;width:100%;overflow:auto;gap:18px;padding:12px 0}
 nav a{white-space:nowrap;font-size:13px}
-.tools{font-size:16px}
+.tools{order:2;margin-left:auto;display:flex;align-items:center;gap:12px;font-size:16px;white-space:nowrap;flex-shrink:0}
 .hero{min-height:470px;background-position:60% center}
 .hero-copy{padding:55px 7%}
 .tiles{grid-template-columns:repeat(2,1fr);margin:12px 4%}
@@ -101,6 +101,27 @@ margin-left:0;
 white-space:nowrap;
 padding-left:0;
 justify-self:end;
+}
+@media(max-width:850px){
+header{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+}
+.brand{order:1}
+.tools{
+order:2;
+margin-left:auto;
+flex:0 0 auto;
+display:flex;
+align-items:center;
+white-space:nowrap;
+}
+nav{
+order:3;
+flex:0 0 100%;
+width:100%;
+}
 }
 </style>
 </head>
