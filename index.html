@@ -104,7 +104,7 @@ footer{padding:28px 5.5%;border-top:1px solid #ffffff1a;color:#a9a294;display:fl
 .showcase-content>p,
 .showcase-benefits,
 .showcase-content>.btn {
-  transition: opacity 0.9s ease, transform 0.9s ease !important;
+  transition: opacity 1.5s ease, transform 1.5s ease !important;
 }
 
 .showcase-content.changing .eyebrow,
@@ -247,7 +247,7 @@ function changeShowcase(index,manual=false){
 }
 function resetShowcaseTimer(){
  clearInterval(showcaseTimer);
- showcaseTimer=setInterval(()=>changeShowcase((currentShowcase+1)%showcaseItems.length),5000);
+ showcaseTimer=setInterval(()=>changeShowcase((currentShowcase+1)%showcaseItems.length),10000);
 }
 showcaseItems.slice(1).forEach(item=>{const img=new Image();img.src=item.image;});
 resetShowcaseTimer();
