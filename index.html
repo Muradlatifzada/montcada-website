@@ -697,6 +697,94 @@ scroll-behavior:auto!important;
 transition:none!important
 }
 }
+/* MONTCADA — PREMIUM MOBIL MENYU */
+@media (max-width: 850px) {
+  header {
+    position: relative !important;
+    z-index: 100 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: auto !important;
+    min-height: 88px !important;
+    padding: 10px 5% !important;
+    gap: 12px !important;
+  }
+
+  header .brand {
+    display: flex !important;
+    align-items: center !important;
+    width: 190px !important;
+    height: 65px !important;
+  }
+
+  header .brand img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  #menuToggle {
+    display: block !important;
+    margin-left: auto !important;
+    background: transparent !important;
+    color: #c5a36a !important;
+    border: 1px solid rgba(197,163,106,.65) !important;
+    border-radius: 3px !important;
+    padding: 9px 13px !important;
+    font-size: 25px !important;
+  }
+
+  #mainNav {
+    display: none !important;
+    position: static !important;
+    order: 3 !important;
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 8px 0 12px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    background: transparent !important;
+  }
+
+  #mainNav.open {
+    display: flex !important;
+  }
+
+  #mainNav a {
+    display: block !important;
+    width: 100% !important;
+    padding: 13px 8px !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(197,163,106,.18) !important;
+    background: transparent !important;
+    color: #eee6d8 !important;
+    font-family: Georgia, serif !important;
+    font-size: 23px !important;
+    text-align: left !important;
+    text-decoration: none !important;
+  }
+
+  #mainNav a.active,
+  #mainNav a[aria-current="page"] {
+    color: #c5a36a !important;
+  }
+}
+
+@media (max-width: 520px) {
+  header .brand {
+    width: 175px !important;
+    height: 60px !important;
+  }
+
+  #mainNav a {
+    font-size: 22px !important;
+  }
+}
 </style>
 </head>
 
@@ -710,27 +798,26 @@ transition:none!important
  </div>
  <div class="languages">AZ　 RU　 EN</div>
 </div>
+ <header>
+  <a class="brand" href="index.html#home" aria-label="MONTCADA ana səhifə">
+    <img src="montcada-logo.webp" alt="MONTCADA">
+  </a>
 
-<header>
+  <button class="menu-toggle" id="menuToggle" type="button"
+    aria-label="Menyunu aç" aria-expanded="false">☰</button>
 
- <a class="brand" href="#home" aria-label="MONTCADA ana səhifə">
-  <img src="montcada-logo.webp" alt="MONTCADA">
- </a>
-
- <button class="menu-toggle" id="menuToggle" aria-label="Menyunu aç" aria-expanded="false">☰</button>
-
- <nav id="mainNav">
-  <a href="mebel.html">Mebel</a>
-  <a href="decking.html">Decking</a>
-  <a href="divar-panelleri.html">Divar panelləri</a>
-  <a href="parket.html">Parket</a>
-  <a href="laminat.html">Laminat</a>
-  <a href="spc.html">SPC</a>
-  <a href="#projects">Layihələr</a>
-  <a href="#about">Haqqımızda</a>
-  <a href="#contact">Əlaqə</a>
- </nav>
-
+  <nav id="mainNav">
+    <a class="active" aria-current="page" href="index.html#home">Ana səhifə</a>
+    <a href="mebel.html">Mebel</a>
+    <a href="decking.html">Decking</a>
+    <a href="divar-panelleri.html">Divar panelləri</a>
+    <a href="parket.html">Parket</a>
+    <a href="laminat.html">Laminat</a>
+    <a href="spc.html">SPC</a>
+    <a href="#projects">Layihələr</a>
+    <a href="#about">Haqqımızda</a>
+    <a href="#contact">Əlaqə</a>
+  </nav>
 </header>
 
 <main>
