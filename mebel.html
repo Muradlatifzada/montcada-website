@@ -30,7 +30,12 @@ footer{padding:22px 5%;display:flex;justify-content:space-between;gap:12px;borde
 @media(max-width:520px){.top{font-size:8px;padding:7px 3%}.logo img{width:145px;height:52px}.hero{height:445px}.hero h1{font-size:38px}.hero p{font-size:13px;max-width:290px}.btn{padding:12px 14px;font-size:11px}.dots{gap:8px;bottom:19px}.dot{width:10px;height:10px}.arrows{bottom:11px;right:4%}.arrows button{width:34px;height:34px;font-size:20px}.benefit{font-size:10px;gap:7px;padding:12px 2px}.benefit span{font-size:20px}.section{padding:38px 4% 20px}.categories{grid-template-columns:repeat(2,1fr);gap:10px}.category{height:155px}.cattext{left:9px;bottom:9px}.cattext h3{font-size:16px}.cattext p{font-size:9px}.wtext{padding:32px 7%}.wtext h2{font-size:34px}footer{flex-wrap:wrap;font-size:9px}}
 /* MONTCADA PREMIUM MOBIL MENU */
 @media(max-width:800px){
-
+header{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+}
 .menu-toggle{
   display:block !important;
   background:transparent !important;
@@ -42,6 +47,8 @@ footer{padding:22px 5%;display:flex;justify-content:space-between;gap:12px;borde
 }
 
 #mainNav{
+  order:3 !important;
+flex:0 0 100% !important;
   display:none !important;
   position:static !important;
   width:100% !important;
