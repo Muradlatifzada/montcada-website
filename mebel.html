@@ -28,60 +28,99 @@ footer{padding:22px 5%;display:flex;justify-content:space-between;gap:12px;borde
   @media(max-width:1050px){nav{gap:13px;font-size:12px}.logo img{width:145px}.category{height:175px}}
 @media(max-width:800px){header{height:65px}.menu-toggle{display:block}nav{display:none;position:absolute;top:65px;left:0;right:0;background:var(--bg);padding:22px 6%;flex-direction:column;align-items:flex-start;gap:19px;border-bottom:1px solid var(--line)}nav.open{display:flex}.hero{height:470px}.hero-content{padding:35px 6%}.hero h1{font-size:43px}.benefits{grid-template-columns:repeat(2,1fr)}.benefit:nth-child(2){border-right:0}.benefit:nth-child(-n+2){border-bottom:1px solid var(--line)}.wisanka{grid-template-columns:1fr}.wisanka img{height:290px}}
 @media(max-width:520px){.top{font-size:8px;padding:7px 3%}.logo img{width:145px;height:52px}.hero{height:445px}.hero h1{font-size:38px}.hero p{font-size:13px;max-width:290px}.btn{padding:12px 14px;font-size:11px}.dots{gap:8px;bottom:19px}.dot{width:10px;height:10px}.arrows{bottom:11px;right:4%}.arrows button{width:34px;height:34px;font-size:20px}.benefit{font-size:10px;gap:7px;padding:12px 2px}.benefit span{font-size:20px}.section{padding:38px 4% 20px}.categories{grid-template-columns:repeat(2,1fr);gap:10px}.category{height:155px}.cattext{left:9px;bottom:9px}.cattext h3{font-size:16px}.cattext p{font-size:9px}.wtext{padding:32px 7%}.wtext h2{font-size:34px}footer{flex-wrap:wrap;font-size:9px}}
-/* MONTCADA PREMIUM MOBIL MENU */
-@media(max-width:800px){
-header{
-  display:flex !important;
-  flex-wrap:wrap !important;
-  align-items:center !important;
-  justify-content:space-between !important;
-}
-.menu-toggle{
-  display:block !important;
-  background:transparent !important;
-  color:#c5a36a !important;
-  border:1px solid #c5a36a !important;
-  border-radius:3px !important;
-  font-size:25px !important;
-  padding:9px 13px !important;
+/* INDEX SƏHİFƏSİNİN MOBİL MENYU STANDARTI */
+@media(max-width:850px){
+  header{
+    position:relative!important;
+    z-index:100!important;
+    display:flex!important;
+    flex-wrap:wrap!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    height:auto!important;
+    min-height:88px!important;
+    padding:10px 5%!important;
+    gap:12px!important;
+  }
+
+  header .logo{
+    display:flex!important;
+    align-items:center!important;
+    width:190px!important;
+    height:65px!important;
+  }
+
+  header .logo img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+  }
+
+  #menuToggle{
+    display:block!important;
+    margin-left:auto!important;
+    background:transparent!important;
+    color:#c5a36a!important;
+    border:1px solid rgba(197,163,106,.65)!important;
+    border-radius:3px!important;
+    padding:9px 13px!important;
+    font-size:25px!important;
+  }
+
+  #mainNav{
+    display:none!important;
+    position:static!important;
+    order:3!important;
+    flex:0 0 100%!important;
+    width:100%!important;
+    height:auto!important;
+    margin:0!important;
+    padding:8px 0 12px!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:0!important;
+    background:transparent!important;
+  }
+
+  #mainNav.open{display:flex!important}
+
+  #mainNav a{
+    display:block!important;
+    width:100%!important;
+    padding:13px 8px!important;
+    border:0!important;
+    border-bottom:1px solid rgba(197,163,106,.18)!important;
+    background:transparent!important;
+    color:#eee6d8!important;
+    font-family:Georgia,serif!important;
+    font-size:23px!important;
+    text-align:left!important;
+    text-decoration:none!important;
+  }
+
+  #mainNav a.active,
+  #mainNav a[aria-current="page"]{
+    color:#c5a36a!important;
+  }
 }
 
-#mainNav{
-  order:3 !important;
-flex:0 0 100% !important;
-  display:none !important;
-  position:static !important;
-  width:100% !important;
-  height:auto !important;
-  padding:8px 5% 15px !important;
-  background:#07140f !important;
-  flex-direction:column !important;
-  align-items:stretch !important;
-  gap:0 !important;
-}
-
-#mainNav.open{
-  display:flex !important;
-}
-
-#mainNav a{
-  display:block !important;
-  padding:13px 8px !important;
-  border-bottom:1px solid rgba(197,163,106,.2) !important;
-  color:#eee6d8 !important;
-  font-family:Georgia,serif !important;
-  font-size:23px !important;
-  text-align:left !important;
-}
-
-#mainNav a.active{
-  color:#c5a36a !important;
-}
-
+@media(max-width:520px){
+  header .logo{
+    width:175px!important;
+    height:60px!important;
+  }
+  #mainNav a{font-size:22px!important}
 }
   </style></head>
 <body>
-<div class="top"><span>☎ +994 70 364 03 09　 ☎ +994 55 204 65 98　 ✉ info@montcada.az</span><span>AZ　 RU　 EN</span></div>
+<div class="topbar">
+ <div class="top-contacts">
+  <a href="tel:+994703640309">☎ +994 70 364 03 09</a>
+  <a href="tel:+994552046598">☎ +994 55 204 65 98</a>
+  <a href="mailto:info@montcada.az">✉ info@montcada.az</a>
+ </div>
+ <div class="languages">AZ　 RU　 EN</div>
+</div>
 <header>
   <a class="logo" href="index.html#home" aria-label="MONTCADA ana səhifə">
     <img src="montcada-logo.webp" alt="MONTCADA">
