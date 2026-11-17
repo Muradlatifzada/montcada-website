@@ -31,9 +31,26 @@ footer{padding:22px 5%;display:flex;justify-content:space-between;gap:12px;borde
 <body>
 <div class="top"><span>☎ +994 70 364 03 09　 ☎ +994 55 204 65 98　 ✉ info@montcada.az</span><span>AZ　 RU　 EN</span></div>
 <header>
-<a class="logo" href="index.html" aria-label="MONTCADA ana səhifə"><img src="montcada-logo.webp" alt="MONTCADA"></a>
-<button class="menu" id="menu" aria-label="Menyunu aç">☰</button>
-<nav id="nav"><a href="index.html">Ana səhifə</a><a class="active" href="mebel.html">Mebel</a><a href="decking.html">Decking</a><a href="index.html#divar-panelleri">Divar panelləri</a><a href="index.html#parket">Parket</a><a href="index.html#laminat">Laminat</a><a href="index.html#spc">SPC</a><a href="index.html#projects">Layihələr</a><a href="index.html#contact">Əlaqə</a></nav>
+  <a class="brand" href="index.html#home" aria-label="MONTCADA ana səhifə">
+    <img src="montcada-logo.webp" alt="MONTCADA">
+  </a>
+
+  <button class="menu-toggle" id="menuToggle"
+    type="button" aria-label="Menyunu aç"
+    aria-expanded="false">☰</button>
+
+  <nav id="mainNav">
+    <a href="index.html#home">Ana səhifə</a>
+    <a class="active" aria-current="page" href="mebel.html">Mebel</a>
+    <a href="decking.html">Decking</a>
+    <a href="divar-panelleri.html">Divar panelləri</a>
+    <a href="parket.html">Parket</a>
+    <a href="laminat.html">Laminat</a>
+    <a href="spc.html">SPC</a>
+    <a href="index.html#projects">Layihələr</a>
+    <a href="index.html#about">Haqqımızda</a>
+    <a href="index.html#contact">Əlaqə</a>
+  </nav>
 </header>
 <section class="hero"><div class="slides">
 <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1900&q=85')"></div>
@@ -78,6 +95,20 @@ const dots=[...dotsBox.children];
 function show(i,manual=false){current=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle("active",n===current));dots.forEach((d,n)=>d.classList.toggle("active",n===current));title.innerHTML=content[current][0];desc.textContent=content[current][1];if(manual)reset()}
 function reset(){clearInterval(timer);timer=setInterval(()=>show(current+1),10000)}
 document.getElementById("next").addEventListener("click",()=>show(current+1,true));document.getElementById("prev").addEventListener("click",()=>show(current-1,true));
-document.getElementById("menu").addEventListener("click",()=>document.getElementById("nav").classList.toggle("open"));
-document.querySelectorAll("#nav a").forEach(a=>a.addEventListener("click",()=>document.getElementById("nav").classList.remove("open")));reset();
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+
+menuToggle.addEventListener("click", () => {
+  const opened = mainNav.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(opened));
+  menuToggle.textContent = opened ? "×" : "☰";
+});
+
+mainNav.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    mainNav.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.textContent = "☰";
+  });
+});reset();
 </script></body></html>
