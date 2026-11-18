@@ -22,7 +22,29 @@ align-items:center
 width:100%;
 height:100%;
 object-fit:contain
-}nav{display:flex;gap:23px;align-items:center;font-size:14px}nav a{white-space:nowrap;transition:color .25s}nav a:hover,nav .active{color:var(--gold)}.menu{display:none;background:none;border:1px solid var(--line);color:var(--gold);font-size:24px;padding:5px 10px}
+}
+    nav{
+display:flex;
+align-items:center;
+justify-content:flex-end;
+gap:clamp(12px,1.8vw,27px);
+flex:1
+}
+
+nav a{
+text-decoration:none;
+color:#eee6d8;
+font:15px "Playfair Display",serif;
+white-space:nowrap;
+transition:color .25s
+}
+
+nav a:hover{color:var(--gold)}
+
+nav a.active{
+color:var(--gold);
+}
+  .menu{display:none;background:none;border:1px solid var(--line);color:var(--gold);font-size:24px;padding:5px 10px}
 .hero{height:510px;position:relative;overflow:hidden;background:var(--panel)}.slides,.slide{position:absolute;inset:0;width:100%;height:100%}.slide{opacity:0;visibility:hidden;background-size:cover;background-position:center;transition:opacity 1.7s ease,visibility 1.7s ease}.slide.active{opacity:1;visibility:visible}
 .shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(7,20,15,.98),rgba(7,20,15,.88) 28%,rgba(7,20,15,.43) 57%,rgba(7,20,15,.05))}
 .hero-content{position:relative;z-index:2;height:100%;padding:55px 6%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.kicker{color:var(--gold);font-size:11px;letter-spacing:5px;font-weight:600}
