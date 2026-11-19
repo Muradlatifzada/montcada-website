@@ -526,12 +526,7 @@ padding:7px 4%;
 font-size:9px
 }
 
-.top-contacts{
-display:grid;
-gap:3px;
-justify-items:center;
-text-align:center;
-}
+
 
 header{
 min-height:75px;
@@ -611,12 +606,6 @@ grid-column:span 2
 
 .topbar{font-size:8px}
 
-.top-contacts{
-display:grid;
-gap:3px;
-justify-items:center;
-text-align:center;
-}
 
 .languages{letter-spacing:1px}
 
