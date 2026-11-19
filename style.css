@@ -35,13 +35,20 @@ border-bottom:1px solid #ffffff20;
 color:#d9d0bf;
 font-size:11px;
 letter-spacing:.35px
+  position:relative;
 }
 
 .top-contacts{
 display:flex;
 gap:24px;
 flex-wrap:wrap;
-justify-content:center;
+
+}
+.top-email{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+white-space:nowrap;
 }
 
 .topbar a{text-decoration:none}
