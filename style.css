@@ -345,11 +345,11 @@ white-space:nowrap
 .category-grid{
 display:grid;
 grid-template-columns:s:repeat(2,1fr);
-gap:18px
+gap:10px
 }
 
 .category-card{
-height:270px;
+height:155px;
 position:relative;
 overflow:hidden;
 border:1px solid #b9965d77;
