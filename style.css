@@ -344,12 +344,12 @@ white-space:nowrap
 
 .category-grid{
 display:grid;
-grid-template-columns:s:repeat(2,1fr);
-gap:10px
+grid-template-columns:repeat(2,1fr);
+gap:18px
 }
 
 .category-card{
-height:155px;
+height:270px;
 position:relative;
 overflow:hidden;
 border:1px solid #b9965d77;
