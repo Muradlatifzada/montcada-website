@@ -800,13 +800,13 @@ transition:none!important
    MEBEL SƏHİFƏSİ CSS
 ===================================== */
 
-.page-mebel.hero{height:510px;
+.page-mebel .hero{height:510px;
       position:relative;
       overflow:hidden;
       background:var(--panel)
      }
-.page-mebel.slides,
-.page-mebel.slide
+.page-mebel .slides,
+.page-mebel .slide
 position:absolute;
 inset:0;
 width:100%;
@@ -819,17 +819,17 @@ height:100%}
   background-position:center;
   transition:opacity 1.7s ease,visibility 1.7s ease
 }
-.page-mebel.slide.active{
+.page-mebel .slide.active{
   opacity:1;
   visibility:visible
 }
-.page-mebel.shade{
+.page-mebel .shade{
   position:absolute;
   inset:0;
   z-index:1;
   background:linear-gradient(90deg,rgba(7,20,15,.98),rgba(7,20,15,.88) 28%,rgba(7,20,15,.43) 57%,rgba(7,20,15,.05))
 }
-.page-mebel.hero-content{
+.page-mebel .hero-content{
   position:relative;
   z-index:2;
   height:100%;
@@ -839,29 +839,29 @@ height:100%}
   justify-content:center;
   align-items:flex-start
 }
-.page-mebel.kicker{
+.page-mebel .kicker{
   color:var(--gold);
   font-size:11px;
   letter-spacing:5px;
   font-weight:600
 }
-.page-mebel.hero h1{
+.page-mebel .hero h1{
   font:700 clamp(42px,5vw,65px)/1.08 "Playfair Display",serif;max-width:570px;
   margin:18px 0;color:var(--cream)
 }
-.page-mebel.hero p{
+.page-mebel .hero p{
   font-size:15px;
   line-height:1.75;
   max-width:390px;
   margin:0 0 24px;
   color:#e2dbcf
 }
-.page-mebel.actions{
+.page-mebel .actions{
   display:flex;
   gap:14px;
   flex-wrap:wrap
 }
-.page-mebel.btn{
+.page-mebel .btn{
   padding:14px 22px;
   border:1px solid var(--gold);
   font-size:13px;transition:.25s
@@ -870,18 +870,18 @@ height:100%}
   background:var(--gold);
   color:#17140e
 }
-.page-mebel.btn.primary{
+.page-mebel .btn.primary{
   background:var(--gold);
   color:#17140e
 }
-.page-mebel.dots{
+.page-mebel .dots{
   position:absolute;
   z-index:3;
   bottom:25px;
   left:6%;
   display:flex;gap:12px
 }
-.page-mebel.dot{
+.page-mebel .dot{
   width:12px;
   height:12px;
   border-radius:50%;
@@ -890,12 +890,12 @@ height:100%}
   padding:0;cursor:pointer;
   transition:background .3s,transform .3s
 }
-.page-mebel.dot.active{
+.page-mebel .dot.active{
   background:var(--cream);
   border-color:var(--cream);
   transform:scale(1.08)
 }
-.page-mebel.arrows{
+.page-mebel .arrows{
   position:absolute;
   right:5%;
   bottom:19px;
@@ -903,7 +903,7 @@ height:100%}
   display:flex;
   gap:12px
 }
-.page-mebel.arrows button{
+.page-mebel .arrows button{
   width:43px;
   height:43px;
   border:1px solid var(--gold);
@@ -913,14 +913,14 @@ height:100%}
   font-size:25px;
   cursor:pointer
 }
-.page-mebel.benefits{
+.page-mebel .benefits{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   padding:17px 5%;
   border-block:1px solid var(--line);
   background:var(--panel)
 }
-.page-mebel.benefit{
+.page-mebel .benefit{
   display:flex;
   align-items:center;
   justify-content:center;
@@ -928,33 +928,33 @@ height:100%}
   border-right:1px solid var(--line);
   font-size:13px
 }
-.page-mebel.benefit:last-child{border:0}
+.page-mebel .benefit:last-child{border:0}
 
-.page-mebel.benefit span{
+.page-mebel .benefit span{
   font-size:25px;
   color:var(--gold)
 }
-.page-mebel.section{
+.page-mebel .section{
   padding:52px 5% 28px;
   max-width:1600px;
   margin:auto
 }
-.page-mebel.section h2{
+.page-mebel .section h2{
   font:600 clamp(30px,4vw,40px) "Playfair Display",serif;
   margin:12px 0;
   color:var(--cream)
 }
-.page-mebel.intro{
+.page-mebel .intro{
   font-size:13px;
   color:var(--muted);
   margin:0 0 25px
 }
-.page-mebel.categories{
+.page-mebel .categories{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:15px
 }
-.page-mebel.category{
+.page-mebel .category{
   height:195px;
   position:relative;
   overflow:hidden;
@@ -962,28 +962,28 @@ height:100%}
   border-radius:8px;
   background:var(--panel)
 }
-.page-mebel.category img{
+.page-mebel .category img{
   width:100%;
   height:100%;
   object-fit:cover;
   transition:transform .7s
 }
-.page-mebel.category:hover img{transform:scale(1.055)}
+.page-mebel .category:hover img{transform:scale(1.055)}
 
-.page-mebel.category:after{
+.page-mebel .category:after{
   content:"";
   position:absolute;
   inset:30% 0 0;
   background:linear-gradient(transparent,rgba(7,20,15,.94))
 }
-.page-mebel.cattext{
+.page-mebel .cattext{
   position:absolute;
   z-index:1;
   bottom:13px;
   left:15px;
   right:14px
 }
-.page-mebel.cattext h3{
+.page-mebel .cattext h3{
   font:600 20px "Playfair Display",serif;
   margin:0 0 4px
 }
@@ -992,12 +992,12 @@ height:100%}
   margin:0;
   color:#e6dfd2
 }
-.page-mebel cattext b{
+.page-mebel .cattext b{
   float:right;
   color:var(--gold);
   font-size:22px
 }
-.page-mebel.wisanka
+.page-mebel .wisanka
 {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -1005,22 +1005,22 @@ height:100%}
   border-top:1px solid var(--line);
   background:var(--panel)
 }
-.page-mebel.wisanka img{
+.page-mebel .wisanka img{
   width:100%;
   height:360px;
   object-fit:cover;
   display:block
 }
-.page-mebel.text{
+.page-mebel .text{
   padding:45px 9%;
   align-self:center
 }
-.page-mebel.wtext h2{
+.page-mebel .wtext h2{
   font:600 42px "Playfair Display",serif;
   margin:12px 0;
   color:var(--cream)
 }
-.page-mebel.wtext p{
+.page-mebel .wtext p{
   line-height:1.85;
   font-size:14px;color:#ded6c9;
   border-left:2px solid var(--gold);
@@ -1030,7 +1030,7 @@ height:100%}
 
 @media(max-width:520px){
   
-  .page-mebel.benefit{font-size:10px;gap:7px;padding:12px 2px}
+  .page-mebel .benefit{font-size:10px;gap:7px;padding:12px 2px}
  .page-mebel .benefit span{font-size:20px}
  .page-mebel .section{padding:38px 4% 20px}
  .page-mebel .categories{grid-template-columns:repeat(2,1fr);gap:10px}
