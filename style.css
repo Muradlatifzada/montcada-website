@@ -1025,173 +1025,21 @@ height:100%}
   border-left:2px solid var(--gold);
   padding-left:20px
 }
-footer{
-  padding:22px 5%;
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  border-top:1px solid var(--line);
-  font-size:10px;
-  letter-spacing:1px;
-  color:var(--muted
-           
-.menu-toggle{display:none}
-  @media(max-width:1050px){
-nav{gap:13px}
-nav a{font:500 15px "Playfair Display",serif}
-.brand img{width:145px}
-.category{height:175px}
-}
+
 
 @media(max-width:520px){
-  .top{font-size:8px;padding:7px 3%}
-  .brand img{width:145px;height:52px}
-  .hero{height:445px}
-  .hero h1{font-size:38px}
-  .hero p{font-size:13px;max-width:290px}
-  .btn{padding:12px 14px;font-size:11px}
-  .dots{gap:8px;bottom:19px}
-  .dot{width:10px;height:10px}
-  .arrows{bottom:11px;right:4%}
-  .arrows button{width:34px;height:34px;font-size:20px}
-  .benefit{font-size:10px;gap:7px;padding:12px 2px}
-  .benefit span{font-size:20px}
-  .section{padding:38px 4% 20px}
-  .categories{grid-template-columns:repeat(2,1fr);gap:10px}
-  .category{height:155px}
-  .cattext{left:9px;bottom:9px}
-  .cattext h3{font-size:16px}
-  .cattext p{font-size:9px}
-  .wtext{padding:32px 7%}
-  .wtext h2{font-size:34px}
-  footer{flex-wrap:wrap;font-size:9px}}
-/* INDEX SƏHİFƏSİNİN MOBİL MENYU STANDARTI */
-@media(max-width:850px){
-  header{
-    position:relative!important;
-    z-index:100!important;
-    display:flex!important;
-    flex-wrap:wrap!important;
-    align-items:center!important;
-    justify-content:space-between!important;
-    height:auto!important;
-    min-height:88px!important;
-    padding:10px 5%!important;
-    gap:12px!important;
-  }
+  
+  .page-mebel.benefit{font-size:10px;gap:7px;padding:12px 2px}
+ .page-mebel .benefit span{font-size:20px}
+ .page-mebel .section{padding:38px 4% 20px}
+ .page-mebel .categories{grid-template-columns:repeat(2,1fr);gap:10px}
+ .page-mebel .category{height:155px}
+ .page-mebel .cattext{left:9px;bottom:9px}
+ .page-mebel .cattext h3{font-size:16px}
+.page-mebel .cattext p{font-size:9px}
+ .page-mebel .wtext{padding:32px 7%}
+ .page-mebel .wtext h2{font-size:34px}
 
-header .brand{
-display:flex!important;
-align-items:center!important;
-width:190px!important;
-height:65px!important;
-flex:0 0 155px!important;
-transform:translateX(-15%)!important;
-}
 
-header .brand img{
-width:100%!important;
-height:100%!important;
-object-fit:contain!important;
-}
 
-  #menuToggle{
-    display:block!important;
-    margin-left:auto!important;
-    background:transparent!important;
-    color:#c5a36a!important;
-    border:1px solid rgba(197,163,106,.65)!important;
-    border-radius:3px!important;
-    padding:9px 13px!important;
-    font-size:25px!important;
-  }
 
-  #mainNav{
-    display:none!important;
-    position:static!important;
-    order:3!important;
-    flex:0 0 100%!important;
-    width:100%!important;
-    height:auto!important;
-    margin:0!important;
-    padding:8px 0 12px!important;
-    flex-direction:column!important;
-    align-items:stretch!important;
-    gap:0!important;
-    background:transparent!important;
-  }
-
-  #mainNav.open{display:flex!important}
-
-  #mainNav a{
-    display:block!important;
-    width:100%!important;
-    padding:13px 8px!important;
-    border:0!important;
-    border-bottom:1px solid rgba(197,163,106,.18)!important;
-    background:transparent!important;
-    color:#eee6d8!important;
-    font-family:Georgia,serif!important;
-    font-size:23px!important;
-    text-align:left!important;
-    text-decoration:none!important;
-  }
-
-  #mainNav a.active,
-  #mainNav a[aria-current="page"]{
-    color:#c5a36a!important;
-  }
-}
-
-@media(max-width:520px){
-  header .brand{
-width:175px!important;
-height:60px!important;
-}
-  #mainNav a{font-size:22px!important}
-}
-    .topbar{
-min-height:38px;
-padding:7px 5.5%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:18px;
-border-bottom:1px solid #ffffff20;
-color:#d9d0bf;
-font-size:11px;
-letter-spacing:.35px
-}
-
-.top-contacts{
-display:flex;
-gap:24px;
-flex-wrap:wrap
-}
-
-.topbar a{text-decoration:none}
-
-.languages{
-color:var(--gold);
-white-space:nowrap;
-letter-spacing:2px
-}
-    @media(max-width:850px){
-.topbar{
-padding:7px 4%;
-font-size:9px
-}
-
-.top-contacts{gap:10px}
-}
-
-@media(max-width:520px){
-.topbar{font-size:8px}
-
-.top-contacts{
-display:grid;
-gap:3px
-}
-
-.languages{letter-spacing:1px}
-}
