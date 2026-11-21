@@ -678,6 +678,10 @@ flex-direction:column
 
 .category-card{height:165px}
 
+#mebel img,
+#parket img{
+  object-fit:contain;
+}
 .category-label{
 left:10px;
 bottom:12px;
