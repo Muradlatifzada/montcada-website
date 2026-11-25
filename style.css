@@ -1044,3 +1044,335 @@ height:100%;
 
 
 
+/* =====================================
+   DECKING SƏHİFƏSİ CSS
+===================================== */
+
+
+  /* DECKING SƏHİFƏSİ */
+
+.page-decking{
+  --panel:#0c2118;
+}
+
+/* HERO */
+.page-decking .hero{
+  min-height:390px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(3,16,11,.95),rgba(3,16,11,.65) 35%,rgba(3,16,11,.05)),
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1900&q=85")
+    center 55%/cover;
+}
+
+.page-decking .hero-content{
+  padding:55px 7%;
+  max-width:600px;
+}
+
+.page-decking .breadcrumb{
+  font-size:12px;
+  color:#c9c0af;
+  margin-bottom:30px;
+}
+
+.page-decking .breadcrumb a{color:var(--gold)}
+
+.page-decking .eyebrow{
+  color:var(--gold);
+  font-size:11px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+.page-decking .hero h1{
+  font:500 clamp(44px,5vw,66px)/1.05 "Playfair Display",serif;
+  margin:15px 0;
+}
+
+.page-decking .hero p{
+  font-size:16px;
+  line-height:1.7;
+  max-width:400px;
+  color:#eee6d8;
+}
+
+.page-decking .buttons{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:24px;
+}
+
+.page-decking .btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:13px 19px;
+  border:1px solid var(--gold);
+  color:var(--cream);
+  font:14px "Playfair Display",serif;
+  transition:.3s;
+}
+
+.page-decking .btn.gold{
+  background:var(--gold);
+  color:#10170f;
+}
+
+.page-decking .btn:hover{
+  background:var(--gold);
+  color:#10170f;
+}
+
+/* ÜSTÜNLÜKLƏR */
+.page-decking .benefits{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  padding:17px 5%;
+  border-top:1px solid #c5a36a30;
+  border-bottom:1px solid #c5a36a30;
+  background:#081a12;
+}
+
+.page-decking .benefit{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  padding:7px;
+  border-right:1px solid #c5a36a35;
+  font-size:12px;
+}
+
+.page-decking .benefit:last-child{border:0}
+
+.page-decking .benefit span{
+  color:var(--gold);
+  font-size:25px;
+}
+
+/* BÖLMƏLƏR */
+.page-decking .section{padding:45px 7%}
+
+.page-decking .section-title{
+  font:500 32px "Playfair Display",serif;
+  margin:8px 0 20px;
+}
+
+.page-decking .section-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:15px;
+  margin-bottom:18px;
+}
+
+.page-decking .gold-link{
+  color:var(--gold);
+  font-size:12px;
+}
+
+/* KOLLEKSİYALAR */
+.page-decking .collections{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+}
+
+.page-decking .collection-card{
+  height:180px;
+  position:relative;
+  overflow:hidden;
+  border:1px solid #c5a36a88;
+  border-radius:7px;
+  cursor:pointer;
+}
+
+.page-decking .collection-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .6s;
+}
+
+.page-decking .collection-card:hover img{transform:scale(1.06)}
+
+.page-decking .collection-card:after{
+  content:"";
+  position:absolute;
+  inset:40% 0 0;
+  background:linear-gradient(transparent,#000d);
+}
+
+.page-decking .collection-info{
+  position:absolute;
+  z-index:2;
+  left:16px;
+  right:16px;
+  bottom:13px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+}
+
+.page-decking .collection-info strong{
+  display:block;
+  font:20px "Playfair Display",serif;
+}
+
+.page-decking .collection-info small{
+  display:block;
+  font-size:11px;
+  margin-top:4px;
+}
+
+.page-decking .collection-info span{color:var(--gold)}
+
+/* RƏNGLƏR */
+.page-decking .colors{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:18px;
+}
+
+.page-decking .color-option{
+  text-align:center;
+  cursor:pointer;
+  font-size:11px;
+  color:var(--cream);
+  background:none;
+  border:0;
+}
+
+.page-decking .color-swatch{
+  display:block;
+  width:76px;
+  height:38px;
+  border:2px solid transparent;
+  border-radius:8px;
+  margin-bottom:7px;
+  transition:.2s;
+}
+
+.page-decking .color-option.selected .color-swatch{
+  border-color:var(--gold);
+  outline:2px solid #c5a36a55;
+}
+
+/* TEXNİKİ MƏLUMAT */
+.page-decking .details{
+  display:grid;
+  grid-template-columns:1fr 1.1fr 1.1fr;
+  gap:24px;
+  align-items:center;
+  border-top:1px solid #c5a36a25;
+  border-bottom:1px solid #c5a36a25;
+  padding-top:22px;
+  padding-bottom:22px;
+}
+
+.page-decking .details h3{
+  font:22px "Playfair Display",serif;
+  margin:0 0 15px;
+}
+
+.page-decking .features{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.page-decking .features li{
+  margin:11px 0;
+  font-size:12px;
+  color:#d6d1c5;
+}
+
+.page-decking .features li:before{
+  content:"✓";
+  color:var(--gold);
+  margin-right:9px;
+  font-weight:bold;
+}
+
+.page-decking .detail-image{
+  width:100%;
+  height:175px;
+  object-fit:cover;
+  border-radius:7px;
+  border:1px solid #c5a36a66;
+}
+
+.page-decking .specs{
+  border:1px solid #c5a36a33;
+  border-radius:7px;
+  padding:14px;
+}
+
+.page-decking .specs h3{font-size:19px}
+
+.page-decking .spec-row{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  padding:10px 0;
+  border-top:1px solid #ffffff15;
+  font-size:11px;
+}
+
+.page-decking .spec-row span:last-child{
+  color:#d6c4a4;
+  text-align:right;
+}
+
+/* LAYİHƏLƏR */
+.page-decking .project-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:13px;
+}
+
+.page-decking .project-grid img{
+  width:100%;
+  height:145px;
+  object-fit:cover;
+  border-radius:7px;
+  border:1px solid #c5a36a55;
+  transition:.4s;
+}
+
+.page-decking .project-grid img:hover{transform:scale(1.025)}
+
+/* ƏLAQƏ */
+.page-decking .quote{
+  margin:10px 5.5% 45px;
+  padding:22px 35px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  background:linear-gradient(110deg,#103d2b,#0b2118);
+  border:1px solid #c5a36a55;
+  border-radius:9px;
+}
+
+.page-decking .quote h2{
+  font:23px "Playfair Display",serif;
+  margin:0 0 7px;
+}
+
+.page-decking .quote p{
+  font-size:12px;
+  color:#c9c8bd;
+  margin:0;
+}
+
+.page-decking .quote-icon{
+  font-size:35px;
+  color:var(--gold);
+}
