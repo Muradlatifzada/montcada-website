@@ -1395,7 +1395,7 @@ height:100%;
   .page-decking .hero p{font-size:14px}
 
   .page-decking .benefits{
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(4,1fr);
     gap:8px;
   }
 
