@@ -800,7 +800,7 @@ transition:none!important
    MEBEL SƏHİFƏSİ CSS
 ===================================== */
 
-.page-mebel .hero{height:510px;
+.page-mebel .hero{height:410px;
       position:relative;
       overflow:hidden;
       background:var(--panel)
@@ -1058,7 +1058,7 @@ height:100%;
 
 /* HERO */
 .page-decking .hero{
-  min-height:390px;
+  min-height:410px;
   position:relative;
   display:flex;
   align-items:center;
