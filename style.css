@@ -1178,12 +1178,13 @@ height:100%;
 /* KOLLEKSİYALAR */
 .page-decking .collections{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(3,minmax(0,1fr));
   gap:17px;
 }
 
 .page-decking .collection-card{
   height:180px;
+  min-width:0;
   position:relative;
   overflow:hidden;
   border:1px solid #c5a36a88;
