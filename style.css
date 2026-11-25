@@ -132,8 +132,8 @@ padding:5px 11px
 /* ANA SLAYD */
 
 .hero{
-height:min(690px,68vw);
-min-height:570px;
+height:min(410px,68vw);
+min-height:410px;
 position:relative;
 overflow:hidden;
 background:#07140f
