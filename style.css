@@ -925,7 +925,7 @@ height:100%;
   align-items:center;
   justify-content:center;
   gap:14px;padding:10px;
-  border-right:1px solid var(--line);
+  border-right:1px solid #c5a36a35;
   font-size:13px
 }
 .page-mebel .benefit:last-child{border:0}
