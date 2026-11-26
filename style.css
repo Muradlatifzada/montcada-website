@@ -45,6 +45,25 @@ flex-wrap:wrap;
 
 }
 
+.location-link{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  color:inherit;
+  text-decoration:none;
+  cursor:pointer;
+  transition:color .2s ease;
+}
+
+.location-link:hover{
+  color:var(--gold);
+}
+
+.location-link svg{
+  width:14px;
+  height:14px;
+}
+
 .top-email{
 position:absolute;
 left:50%;
