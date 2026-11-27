@@ -624,11 +624,16 @@ grid-column:span 1
 
 @media(max-width:520px){
 
-.topbar{font-size:8px}
-  .top-contacts{
+.top-contacts{
+  width:100%;
+  display:flex;
   flex-direction:column;
   align-items:flex-start;
   gap:5px;
+}
+
+.topbar{
+  flex-wrap:wrap;
 }
 
 
