@@ -626,7 +626,7 @@ grid-column:span 1
 
 
 .topbar{
-  flex-wrap:nowrap;
+  flex-wrap:wrap;
 }
 
 
