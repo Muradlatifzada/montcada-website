@@ -961,14 +961,6 @@ height:100%;
   font-size:25px;
   cursor:pointer
 }
-.page-mebel .benefits{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  padding:17px 5%;
-  border-block:1px solid var(--line);
-  background:var(--panel)
-}
-
 
 .page-mebel .section{
   padding:52px 5% 28px;
@@ -1161,17 +1153,6 @@ height:100%;
   background:var(--gold);
   color:#10170f;
 }
-
-/* ÜSTÜNLÜKLƏR */
-.page-decking .benefits{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  padding:17px 5%;
-  border-top:1px solid #c5a36a30;
-  border-bottom:1px solid #c5a36a30;
-  background:#081a12;
-}
-
 
 /* BÖLMƏLƏR */
 .page-decking .section{padding:45px 7%}
