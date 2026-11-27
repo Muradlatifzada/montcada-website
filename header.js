@@ -18,7 +18,10 @@ fetch("header.html")
       const url = new URL(link.getAttribute("href"), location.href);
       const targetPage = url.pathname.split("/").pop() || "index.html";
 
-      if (targetPage === currentPage && !url.hash) {
+      if (
+  targetPage === currentPage &&
+  (!url.hash || (currentPage === "index.html" && url.hash === "#home"))
+) {
         link.classList.add("active");
         link.setAttribute("aria-current", "page");
       } else {
