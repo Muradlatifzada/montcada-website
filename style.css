@@ -713,6 +713,10 @@ font-size:11px;
 padding:3px
 }
 
+.benefit:not(:last-child){
+  border-right:1px solid #c5a36a;
+}
+  
 .benefit-icon{font-size:23px}
 
 .section{padding:52px 5%}
