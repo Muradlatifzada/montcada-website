@@ -587,18 +587,24 @@ min-height:530px
 
 .benefits{
 grid-template-columns:repeat(4,minmax(0,1fr));
-gap:15px;
-padding:22px 5%
+gap:8px;
+padding:18px 3%;
 }
 
 .benefit{
-justify-content:flex-start;
-border-right:1px solid #c5a36a44;
-font-size:13px
+display:flex;
+align-items:center;
+justify-content:center;
+gap:6px;
+min-width:0;
+padding:5px 2px;
+border:0;
+font:400 12px "Playfair Display",serif;
 }
 
-.benefit:last-child{
-border-right:0;
+.benefit-icon{
+font-size:23px;
+flex-shrink:0;
 }
 
 .category-grid{
