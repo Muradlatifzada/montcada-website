@@ -1058,17 +1058,7 @@ height:100%;
 
 
 @media(max-width:520px){
-      .page-mebel .benefits{
-    display:flex;
-    justify-content:space-between;
-    gap:6px;
-  }
-
-  .page-mebel .benefit{
-    flex:0 1 auto;
-    justify-content:flex-start;
-    gap:3px;
-  }
+      
  .page-mebel .section{padding:38px 4% 20px}
  .page-mebel .categories{grid-template-columns:repeat(2,1fr);gap:10px}
  .page-mebel .category{height:155px}
