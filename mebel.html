@@ -12,36 +12,8 @@
 
 <body class="page-mebel">
 
-<div class="topbar">
- <div class="top-contacts">
-  <a href="tel:+994703640309">☎ +994 70 364 03 09</a>
-  <a href="tel:+994552046598">☎ +994 55 204 65 98</a>
-  <a class="top-email" href="mailto:info@montcada.az">✉ info@montcada.az</a>
- </div>
- <div class="languages">AZ　 RU　 EN</div>
-</div>
-<header>
-  <a class="brand" href="index.html#home" aria-label="MONTCADA ana səhifə">
-    <img src="montcada-logo.webp" alt="MONTCADA">
-  </a>
-
-  <button class="menu-toggle" id="menuToggle"
-    type="button" aria-label="Menyunu aç"
-    aria-expanded="false">☰</button>
-
-  <nav id="mainNav">
-    <a href="index.html#home">Ana səhifə</a>
-    <a class="active" aria-current="page" href="mebel.html">Mebel</a>
-    <a href="decking.html">Decking</a>
-    <a href="divar-panelleri.html">Divar panelləri</a>
-    <a href="parket.html">Parket</a>
-    <a href="laminat.html">Laminat</a>
-    <a href="spc.html">SPC</a>
-    <a href="index.html#projects">Layihələr</a>
-    <a href="index.html#about">Haqqımızda</a>
-    <a href="index.html#contact">Əlaqə</a>
-  </nav>
-</header>
+<div id="siteHeader"></div>
+  
 <section class="hero"><div class="slides">
 <div class="slide active" style="background-image:url('images/slide-01.webp')"></div>
 <div class="slide" style="background-image:url('images/slide-02.webp')"></div>
@@ -85,20 +57,12 @@ const dots=[...dotsBox.children];
 function show(i,manual=false){current=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle("active",n===current));dots.forEach((d,n)=>d.classList.toggle("active",n===current));title.innerHTML=content[current][0];desc.textContent=content[current][1];if(manual)reset()}
 function reset(){clearInterval(timer);timer=setInterval(()=>show(current+1),10000)}
 document.getElementById("next").addEventListener("click",()=>show(current+1,true));document.getElementById("prev").addEventListener("click",()=>show(current-1,true));
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
 
-menuToggle.addEventListener("click", () => {
-  const opened = mainNav.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(opened));
-  menuToggle.textContent = opened ? "×" : "☰";
-});
+  
+  reset();
+</script>
 
-mainNav.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    mainNav.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.textContent = "☰";
-  });
-});reset();
-</script></body></html>
+<script src="header.js"></script>
+  
+</body>
+</html>
