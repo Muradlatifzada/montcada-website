@@ -300,30 +300,31 @@ background:var(--gold);
 color:#07140f
 }
 
-/* ÜSTÜNLÜKLƏR */
+/* ÜSTÜNLÜKLƏR — ÜMUMİ */
 
 .benefits{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-padding:25px 5%;
-background:#071a12;
-border-bottom:1px solid #c5a36a33
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  padding:17px 5%;
+  background:#071a12;
+  border-bottom:1px solid #c5a36a33;
 }
 
 .benefit{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:14px;
-padding:5px 12px;
-font:15px "Playfair Display",serif
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-width:0;
+  padding:7px;
+  border:0;
+  font:400 12px "Playfair Display",serif;
 }
 
-.benefit:last-child{border:0}
-
 .benefit-icon{
-font-size:30px;
-color:var(--gold)
+  flex-shrink:0;
+  font-size:25px;
+  color:var(--gold);
 }
 
 /* MƏHSULLAR */
@@ -585,20 +586,20 @@ min-height:530px
 .hero-content{padding:45px 7%}
 
 .benefits{
-grid-template-columns:repeat(4,minmax(0,1fr));
-gap:8px;
-padding:18px 3%;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:3px;
+  padding:18px 2%;
 }
 
 .benefit{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:6px;
-min-width:0;
-padding:5px 2px;
-border:0;
-font:400 12px "Playfair Display",serif;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:4px;
+  min-width:0;
+  padding:4px 2px;
+  border:0;
+  font:400 9px "Playfair Display",serif;
 }
 
 .benefit-icon{
@@ -711,14 +712,7 @@ width:36px;
 height:36px;
 font-size:21px
 }
-
-.benefit{
-gap:8px;
-font-size:11px;
-padding:3px
-}
-
-  
+ 
 .benefit-icon{font-size:23px}
 
 .section{padding:52px 5%}
@@ -974,19 +968,8 @@ height:100%;
   border-block:1px solid var(--line);
   background:var(--panel)
 }
-.page-mebel .benefit{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:14px;padding:10px;
-  font-size:13px
-}
-.page-mebel .benefit:last-child{border:0}
 
-.page-mebel .benefit span{
-  font-size:25px;
-  color:var(--gold)
-}
+
 .page-mebel .section{
   padding:52px 5% 28px;
   max-width:1600px;
@@ -1083,8 +1066,6 @@ height:100%;
 
 @media(max-width:520px){
   
-  .page-mebel .benefit{font-size:10px;gap:7px;padding:12px 2px}
- .page-mebel .benefit span{font-size:20px}
  .page-mebel .section{padding:38px 4% 20px}
  .page-mebel .categories{grid-template-columns:repeat(2,1fr);gap:10px}
  .page-mebel .category{height:155px}
@@ -1191,21 +1172,6 @@ height:100%;
   background:#081a12;
 }
 
-.page-decking .benefit{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:10px;
-  padding:7px;
-  font-size:12px;
-}
-
-.page-decking .benefit:last-child{border:0}
-
-.page-decking .benefit span{
-  color:var(--gold);
-  font-size:25px;
-}
 
 /* BÖLMƏLƏR */
 .page-decking .section{padding:45px 7%}
@@ -1451,23 +1417,6 @@ height:100%;
   gap:3px;
   padding-left:2%;
   padding-right:2%;
-}
-
-.page-decking .benefit{
-  min-width:0;
-  gap:4px;
-  padding:4px 2px;
-  font-size:9px;
-  overflow-wrap:anywhere;
-}
-
-  .page-decking .benefit{
-  justify-content:flex-start;
-  font-size:9px;
-  min-width:0;
-  gap:4px;
-  padding:4px 2px;
-  overflow-wrap:anywhere;
 }
 
   .page-decking .collections{grid-template-columns:1fr 1fr}
