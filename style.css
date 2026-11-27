@@ -625,6 +625,11 @@ grid-column:span 1
 @media(max-width:520px){
 
 .topbar{font-size:8px}
+  .top-contacts{
+  flex-direction:column;
+  align-items:flex-start;
+  gap:5px;
+}
 
 
 .languages{letter-spacing:1px}
