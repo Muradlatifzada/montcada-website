@@ -318,12 +318,12 @@ color:#07140f
   min-width:0;
   padding:7px;
   border:0;
-  font:400 12px "Playfair Display",serif;
+  font:400 16px "Playfair Display",serif;
 }
 
 .benefit-icon{
   flex-shrink:0;
-  font-size:25px;
+  font-size:28px;
   color:var(--gold);
 }
 
