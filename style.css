@@ -1058,7 +1058,14 @@ height:100%;
 
 
 @media(max-width:520px){
-    .page-mebel .benefit{
+      .page-mebel .benefits{
+    display:flex;
+    justify-content:space-between;
+    gap:6px;
+  }
+
+  .page-mebel .benefit{
+    flex:0 1 auto;
     justify-content:flex-start;
     gap:3px;
   }
