@@ -586,7 +586,7 @@ min-height:530px
 .hero-content{padding:45px 7%}
 
 .benefits{
-grid-template-columns:1fr 1fr;
+grid-template-columns:4fr 1fr;
 gap:15px;
 padding:22px 5%
 }
