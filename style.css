@@ -593,8 +593,12 @@ padding:22px 5%
 
 .benefit{
 justify-content:flex-start;
-border:0;
+border-right:1px solid #c5a36a44;
 font-size:13px
+}
+
+.benefit:last-child{
+border-right:0;
 }
 
 .category-grid{
