@@ -630,7 +630,12 @@ grid-column:span 1
 }
 
 
-.languages{letter-spacing:1px}
+.languages{
+  position:absolute;
+  top:7px;
+  right:4%;
+  letter-spacing:1px;
+}
 
 .hero{
 height:590px;
