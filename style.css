@@ -1434,7 +1434,7 @@ height:100%;
     display: flex;
     align-items: center;
     overflow: hidden;
-    background: #10271c;
+    
 }
 
 .page-wall-panels .hero-slides,
@@ -1461,7 +1461,7 @@ height:100%;
     inset: 0;
     background: linear-gradient(
         90deg,
-        #061d14 0%,
+        var(--bg) 0%,
         rgba(6,29,20,.91) 30%,
         rgba(6,29,20,.35) 68%,
         rgba(6,29,20,.08)
@@ -1525,7 +1525,7 @@ height:100%;
     border-radius: 50%;
     border: 1px solid var(--gold);
     color: var(--gold);
-    background: #061d14aa;
+    background: background: var(--bg);
     font-size: 25px;
     cursor: pointer;
 }
@@ -1536,13 +1536,13 @@ height:100%;
     padding: 17px 5%;
     border-top: 1px solid #ffffff22;
     border-bottom: 1px solid #ffffff22;
-    background: #062318;
+    background: background: var(--panel);
 }
 
 .page-wall-panels .feature {
     text-align: center;
     padding: 8px;
-    border-right: 1px solid #ffffff33;
+    border-right: 1px solid rgba(255,255,255,0.2);
     font-size: 15px;
 }
 
