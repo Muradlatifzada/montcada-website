@@ -1525,7 +1525,7 @@ height:100%;
     border-radius: 50%;
     border: 1px solid var(--gold);
     color: var(--gold);
-    background: background: var(--bg);
+    background: var(--bg);
     font-size: 25px;
     cursor: pointer;
 }
@@ -1536,7 +1536,7 @@ height:100%;
     padding: 17px 5%;
     border-top: 1px solid #ffffff22;
     border-bottom: 1px solid #ffffff22;
-    background: background: var(--panel);
+    background: var(--panel);
 }
 
 .page-wall-panels .feature {
