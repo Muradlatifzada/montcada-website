@@ -843,7 +843,68 @@ transition:none!important
   }
 }
 
+/* =================================
+   BÜTÜN SƏHİFƏLƏR — ÜSTÜNLÜKLƏR ZOLAĞI
+================================= */
 
+.site-benefits {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  padding: 13px 5.5%;
+  background: #0c1d16;
+  border-top: 1px solid #c5a36a55;
+  border-bottom: 1px solid #c5a36a55;
+}
+
+.site-benefit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 44px;
+  padding: 5px 12px;
+  border-right: 1px solid #c5a36a55;
+  color: #eee6d8;
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+}
+
+.site-benefit:last-child {
+  border-right: 0;
+}
+
+.site-benefit-icon {
+  flex-shrink: 0;
+  color: #c5a36a;
+  font-size: 27px;
+}
+
+@media (max-width: 620px) {
+  .site-benefits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 8px 3%;
+  }
+
+  .site-benefit {
+    justify-content: flex-start;
+    font-size: 12px;
+    gap: 9px;
+    padding: 10px 8px;
+  }
+
+  .site-benefit:nth-child(2) {
+    border-right: 0;
+  }
+
+  .site-benefit:nth-child(-n+2) {
+    border-bottom: 1px solid #c5a36a33;
+  }
+
+  .site-benefit-icon {
+    font-size: 22px;
+  }
+}
 
 /* =====================================
    MEBEL SƏHİFƏSİ CSS
