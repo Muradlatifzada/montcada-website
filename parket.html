@@ -11,23 +11,7 @@
 
 </head>
 <body class="page-parket">
-<div class="topbar"><div class="contacts"><a href="tel:+994703640309">☎ +994 70 364 03 09</a><a href="tel:+994552046598">☎ +994 55 204 65 98</a><a href="mailto:info@montcada.az">✉ info@montcada.az</a></div><div class="langs"><span>AZ</span><span>RU</span><span>EN</span></div></div>
-
-<header>
- <a class="brand" href="index.html" aria-label="MONTCADA ana səhifə"><img src="montcada-logo.webp" alt="MONTCADA"></a>
- <button class="menu-toggle" id="menuToggle" aria-label="Menyunu aç" aria-expanded="false">☰</button>
- <nav id="mainNav">
-  <a href="mebel.html">Mebel</a>
-  <a href="decking.html">Decking</a>
-  <a href="divar-panelleri.html">Divar panelləri</a>
-  <a href="parket.html">Parket</a>
-  <a href="laminat.html">Laminat</a>
-  <a href="spc.html">SPC</a>
-  <a href="index.html#projects">Layihələr</a>
-  <a href="index.html#about">Haqqımızda</a>
-  <a href="index.html#contact">Əlaqə</a>
- </nav>
-</header>
+<div id="siteHeader"></div>
 
 <section class="hero" aria-label="Parket təqdimatı">
 <div class="hero-img active" style="background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85')"></div>
@@ -59,24 +43,9 @@ slides.forEach((_,i)=>{const d=document.createElement('button');d.className='dot
 function show(i,manual=false){slides[current].classList.remove('active');dotsBox.children[current].classList.remove('active');current=(i+slides.length)%slides.length;slides[current].classList.add('active');dotsBox.children[current].classList.add('active');if(manual)reset()}
 function reset(){clearInterval(timer);timer=setInterval(()=>show(current+1),10000)}
 document.getElementById('prev').onclick=()=>show(current-1,true);document.getElementById('next').onclick=()=>show(current+1,true);reset();
-const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('mainNav');menuBtn.onclick=()=>nav.classList.toggle('open');nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
 </script>
 
-<script>
-(function(){
- const button=document.getElementById("menuToggle");
- const nav=document.getElementById("mainNav");
- if(button && nav){
-  button.addEventListener("click",()=>{
-   const opened=nav.classList.toggle("open");
-   button.setAttribute("aria-expanded",String(opened));
-  });
-  nav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{
-   nav.classList.remove("open");
-   button.setAttribute("aria-expanded","false");
-  }));
- }
-})();
-</script>
+<script src="header.js"></script>
 
 </body></html>
