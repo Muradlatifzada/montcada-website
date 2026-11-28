@@ -2020,7 +2020,7 @@ height:100%;
 }
 
 .page-parket .card {
-  height: 190px;
+  height: 260px;
   position: relative;
   border: 1px solid #c5a36a55;
   border-radius: 13px;
@@ -2127,10 +2127,7 @@ height:100%;
 /* PARKET — TABLET */
 
 @media(max-width:900px) {
-  .page-parket .cards {
-    grid-template-columns: repeat(3,1fr);
-  }
-
+  
   .page-parket .about {
     grid-template-columns: 1fr 1fr;
   }
@@ -2215,7 +2212,7 @@ height:100%;
   }
 
   .page-parket .card {
-    height: 150px;
+    height: 180px;
   }
 
   .page-parket .card-label {
