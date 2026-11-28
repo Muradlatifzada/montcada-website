@@ -1702,10 +1702,13 @@ height:100%;
     }
 
     .page-wall-panels .features {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 4px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 100%;
+    box-sizing: border-box;
 }
-    }
 
     .page-wall-panels .feature {
         font-size: 12px;
